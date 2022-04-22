@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-mongoose.connect('mongodb://localhost/amazonahoca', {
+mongoose.connect('mongodb+srv://vsfashion:vsfashion2022@cluster0.eeg2z.mongodb.net/vsfashion?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
