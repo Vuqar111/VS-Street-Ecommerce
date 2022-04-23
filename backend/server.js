@@ -6,7 +6,17 @@ import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
+import cors from 'cors';
 
+app.use(
+  cors(
+    {
+     origin: '*', 
+     credentials: true,
+     methods: ['GET', 'POST', 'PUT', 'DELETE','UPDATE', 'PATCH'],
+    }
+  )
+)
 
  
 
@@ -44,7 +54,7 @@ app.get('/api/config/google', (req, res) => {
 
 
 app.get('/', (req, res) => {
-  res.send('Server deqiq olsun ff  is ready');
+  res.send('Server   is ready');
 });
 
 app.use((err, req, res, next) => {
