@@ -8,22 +8,14 @@ import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
 import cors from 'cors';
 
-app.use(
-  cors(
-    {
-     origin: '*', 
-     credentials: true,
-     methods: ['GET', 'POST', 'PUT', 'DELETE','UPDATE', 'PATCH'],
-    }
-  )
-)
+
 
  
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors())
 
 mongoose.connect('mongodb+srv://vsfashion:vsfashion2022@cluster0.eeg2z.mongodb.net/vsfashion?retryWrites=true&w=majority', {
   useNewUrlParser: true,
