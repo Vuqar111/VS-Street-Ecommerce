@@ -37,6 +37,8 @@ app.get('/api/config/paypal', (req, res) => {
 app.get('/api/config/google', (req, res) => {
   res.send('');
 });
+
+
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
@@ -47,7 +49,7 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 
 app.get('/', (req, res) => {
-  res.send('Server   is ready');
+  res.send('Server vallah   is ready');
 });
 
 app.use((err, req, res, next) => {

@@ -1,8 +1,8 @@
 {
-  "name": "furnise",
+  "name": "vsfashion",
   "type": "module",
   "version": "1.0.0",
-  "description": "Furnise Commerce website",
+  "description": "VsFashion Commerce Website",
   "main": "server.js",
   "scripts": {
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
