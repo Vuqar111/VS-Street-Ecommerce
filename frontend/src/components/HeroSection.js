@@ -15,17 +15,17 @@ const HeroSection = () => {
       <div className="main">
         <div className="content">
           <h1 className="herotitle">
-            <span className="clipspan">Öz tərzini</span> with <br /> özün
-            yarat
+            <span className="clipspan">VS-Fashion</span>-da <br /> öz
+            tərzini yarat
           </h1>
           <p>
             Dimension of reality that makes change possible and understandable.
             An indefinite and homogeneous environment in which natural events
             and human existence take place.
           </p>
-          <Link to="http://localhost:3001/search/name/">
-            <button type="button" className="greenbtn homebtn">
-              Shop Now
+          <Link to="/">
+            <button type="button" className="bg-[#08AD76] text-[white] p-[1rem] homebtn">
+              Bizi kəşf et
             </button>
           </Link>
         </div>
@@ -95,10 +95,11 @@ const Wrapper = styled.div`
       align-items: center;
       justify-content: center;
       width: 90%;
-      height: 450px;
+      height: auto;
       clip-path: none;
       background: transparent;
       border-radius: 15px;
+      margin-top: 15px;
     }
     .content {
       margin-left: 0px;

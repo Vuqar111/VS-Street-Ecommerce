@@ -22,6 +22,11 @@ const Footer = () => {
           <ul>
             <li>050-519-87-54</li>
             <li>info@vsfashion.az</li>
+            <li>
+              <Link to='/contact'>
+              Əlaqə
+              </Link>
+              </li>
           </ul>
         </div>
 

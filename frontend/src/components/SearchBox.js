@@ -13,7 +13,7 @@ export default function SearchBox(props) {
           type="text"
           name="q"
           id="q"
-          placeholder='Search by name or category'
+          placeholder='Axtarış üçün məhsul adı yazın'
           onChange={(e) => setName(e.target.value)}
         ></input>
         <button  type="submit">

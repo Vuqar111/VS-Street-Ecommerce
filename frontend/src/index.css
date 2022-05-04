@@ -13,6 +13,64 @@ body {
 /* * {
   border: 1px solid red;
 } */
+
+:root {
+  --green-color: #08ad76;
+  --black-color: #203040;
+  --sky-color: #c5cee0;
+  --open-sky-color: #e4e9f2;
+  --white-color: #f6f6f4;
+}
+#root {
+  height: 100%;
+}
+
+header {
+  height: 12vh;
+  color: black;
+}
+main {
+  grid-area: main;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+i {
+  color: black;
+}
+li {
+  list-style: none;
+  margin-top: 1rem;
+}
+input,
+textarea {
+  /* padding: 1rem; */
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button {
+  background-color: #f8f8f8;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+select {
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
 /* Payment-- */
 .formpayment {
   width: 60%;
@@ -106,64 +164,6 @@ input[type="radio"] {
 }
 .paymentdiv label {
   font-size: 40px;
-}
-
-:root {
-  --green-color: #08ad76;
-  --black-color: #203040;
-  --sky-color: #c5cee0;
-  --open-sky-color: #e4e9f2;
-  --white-color: #f6f6f4;
-}
-#root {
-  height: 100%;
-}
-
-header {
-  height: 12vh;
-  color: black;
-}
-main {
-  grid-area: main;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-i {
-  color: black;
-}
-li {
-  list-style: none;
-  margin-top: 1rem;
-}
-input,
-textarea {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid black;
-  font-size: 1.6rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-button {
-  background-color: #f8f8f8;
-  padding: 1rem;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-select {
-  border: none;
-  outline: none;
-  font-weight: bold;
 }
 
 .greenlink {
@@ -334,6 +334,8 @@ textarea {
   color: var(--green-color);
 }
 
+
+
 .home {
   width: 80%;
   margin: auto;
@@ -352,200 +354,9 @@ textarea {
   width: 300px;
 }
 
-@media (max-width: 756px) {
-  ::-webkit-scrollbar {
-    display: none;
-    overflow: hidden;
-  }
-  .mainpopularsection {
-    display: none;
-  }
 
-  .closeshipping {
-    position: absolute;
-    top: 15%;
-    left: 83%;
-    cursor: pointer;
-    font-size: 20px;
-    color: var(--green-color);
-  }
 
-  .home {
-    width: 95%;
-    margin: auto;
-    margin-top: 50px;
-  }
 
-  .homeproducts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  header {
-    height: 8vh;
-    color: black;
-  }
-  .signinscreen {
-    width: 90%;
-    margin: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .shippingadress {
-    padding: 20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 95%;
-    overflow: scroll;
-    height: 80vh;
-    margin: auto;
-    margin-top: 0px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-  /* Mobile Menu */
-
-  .mobilesearchmenu {
-    display: none;
-    width: 100%;
-    height: 8vh;
-    z-index: 0;
-    padding-top: 1rem;
-    margin-top: 45px;
-  }
-
-  .mainmobilemenu {
-    display: none;
-    width: 100%;
-    height: 100vh;
-    background-color: gray;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3000;
-    padding-top: 2rem;
-    color: white;
-  }
-
-  .mobilesearchmenu.opensearch {
-    display: block;
-  }
-
-  .mainmobilemenu.open {
-    display: block;
-  }
-  .hamburgermenu.open .mainmobilemenu {
-    display: block;
-  }
-
-  .searchbtn.opensearch .mobilesearchmenu {
-    display: block;
-  }
-
-  .mobileresponsive {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    margin: auto;
-  }
-
-  .mobilecross {
-    cursor: pointer;
-    font-size: 2rem;
-    color: white;
-  }
-
-  .mobiledropdowncontent li {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .desktopmenu {
-    display: none;
-  }
-  .search {
-    display: none;
-  }
-  .searchbtn {
-    position: absolute;
-    right: 43px;
-    color: white;
-    font-size: 2.5rem;
-    display: block;
-    cursor: pointer;
-  }
-  .hamburgermenu {
-    position: absolute;
-    right: 13px;
-    color: white;
-    font-size: 2.5rem;
-    display: block;
-    cursor: pointer;
-  }
-  .appsearch {
-    text-align: center;
-  }
-
-  .searchmobile {
-    width: 100%;
-    text-align: center;
-  }
-  .searchmobile i {
-    color: white;
-    font-size: 20px;
-  }
-
-  .searchbtndiv {
-    width: 50px;
-    height: 30px;
-  }
-  .searchmobile h2 {
-    color: white;
-  }
-  .searchmobilediv {
-    width: 95%;
-    height: 35px;
-    margin: auto;
-    display: flex;
-    background-color: var(--green-color);
-  }
-  .searchmobilediv input {
-    background-color: grey;
-    border-radius: 0px;
-    border: none;
-    outline: none;
-    color: white;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    height: 35px;
-    font-size: 20px;
-  }
-
-  .row {
-    width: 100%;
-  }
-  .ratingnum {
-    display: none;
-  }
-  a.brand {
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-  }
-}
 
 .loginimg {
   width: 50%;
@@ -606,35 +417,7 @@ textarea {
   width: 30%;
   border: 1px solid black;
 }
-@media (max-width: 756px) {
-  .rownavbar {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    background-color: black;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .rowcart {
-    width: 100%;
-    flex-direction: column;
-  }
-  .col-2 {
-    width: 100%;
-  }
-  .ordersection {
-    width: 100%;
-    margin: auto;
-    margin-top: 20px;
-  }
 
-  .loginimg {
-    margin-top: 50px;
-    width: 90%;
-    height: 15%;
-  }
-}
 
 .row.center {
   justify-content: center;
@@ -766,26 +549,7 @@ hr {
   display: none;
 }
 
-@media screen and (max-width: 756px) {
-  .result {
-    font-size: 20px;
-  }
-  .fdisplay {
-    width: 100%;
-    background-color: var(--green-color);
-    text-align: center;
-    display: block;
-    cursor: pointer;
-  }
-  .filtersection {
-    display: none;
-    transition: 3s all ease;
-  }
-  .filtersection.showfilter {
-    display: block;
-    transition: 3s ease all;
-  }
-}
+
 
 /* Form */
 
@@ -813,18 +577,6 @@ hr {
   margin-top: 25px;
 }
 
-@media (max-width: 756px) {
-  .form {
-    width: 90%;
-  }
-
-  .populartitle {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-}
 
 .formreview {
   width: 100%;
@@ -885,54 +637,6 @@ hr {
   display: block;
 }
 
-@media (max-width: 756px) {
-  .dropdown {
-    display: inline-block;
-    position: relative;
-    font-size: 10px;
-  }
-  .dropdown-content {
-    position: absolute;
-    display: none;
-    right: 0;
-    font-size: 10px;
-    min-width: 11rem;
-    padding: 8px;
-    z-index: 1;
-    background-color: #203040;
-    margin: 0;
-    margin-top: 0.4rem;
-    border-radius: 0.5rem;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .badge {
-    position: absolute;
-    top: 10%;
-    margin-left: 4px;
-    padding: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    background-color: var(--green-color);
-    color: #ffffff;
-    font-size: 1.2rem;
-  }
-
-  .loginform {
-    width: 100%;
-  }
-
-  .loginform input {
-    background-color: none;
-  }
-
-  .loginform .form {
-    box-shadow: none;
-  }
-}
 
 /* Checkout Steps */
 .checkout-steps > div {
@@ -1026,6 +730,8 @@ hr {
   border-radius: 0 1rem 1rem 0;
   border-left: 0;
 }
+
+/*  */
 /* Pagination */
 .pagination {
   margin-top: 15px;
@@ -1064,88 +770,315 @@ hr {
 }
 
 .summary-title.color1 {
-  background-color: #f0e0e0;
+  background-color: #A2FA7F;
+  color: white;
 }
 .summary-title.color2 {
-  background-color: #e0f0e0;
+  background-color: #64E332;
+  color: white;
 }
 .summary-title.color3 {
-  background-color: #e0e0f0;
+  background-color: #306E18;
+  color: white;
 }
 
 
 
 
+@media (max-width: 756px) {
+  ::-webkit-scrollbar {
+    display: none;
+    overflow: hidden;
+  }
+  .mainpopularsection {
+    display: none;
+  }
 
-/* 
+  .closeshipping {
+    position: absolute;
+    top: 15%;
+    left: 83%;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--green-color);
+  }
 
-.wrapperanimation{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  .home {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+  }
+   
+  .homeproducts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  header {
+    height: 8vh;
+    color: black;
+  }
+  .signinscreen {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .shippingadress {
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    overflow: scroll;
+    height: 80vh;
+    margin: auto;
+    margin-top: 0px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  /* Mobile Menu */
+
+  .mobilesearchmenu {
+    display: none;
+    width: 100%;
+    margin-top: 100px;
+    z-index: 100;
+  }
+
+  .mainmobilemenu {
+    width: 100%;
+    background-color: grey;
+    z-index: 1000;
+    position: absolute;
+    top: 0%;
+    padding-top: 2rem;
+    color: white;
+  }
+
+  .mobilesearchmenu.opensearch {
+    display: block;
+  }
+
+  .mainmobilemenu.open {
+    display: block;
+  }
+  .hamburgermenu.open .mainmobilemenu {
+    display: block;
+  }
+
+  .searchbtn.opensearch .mobilesearchmenu {
+    display: block;
+  }
+
+  .mobileresponsive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+  }
+
+  .mobilecross {
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .mobiledropdowncontent li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktopmenu {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .searchbtn {
+    position: absolute;
+    right: 43px;
+    color: white;
+    font-size: 2.5rem;
+    display: block;
+    cursor: pointer;
+  }
+  .hamburgermenu {
+    position: absolute;
+    right: 13px;
+    color: white;
+    font-size: 2.5rem;
+    display: block;
+    cursor: pointer;
+  }
+  .appsearch {
+    text-align: center;
+  }
+
+  .searchmobile {
+    width: 100%;
+    text-align: center;
+  }
+  .searchmobile i {
+    color: white;
+    font-size: 20px;
+  }
+
+  .searchbtndiv {
+    width: 50px;
+    height: 30px;
+  }
+  .searchmobile h2 {
+    color: white;
+  }
+  .searchmobilediv {
+    width: 95%;
+    height: 35px;
+    margin: auto;
+    display: flex;
+    background-color: var(--green-color);
+  }
+  .searchmobilediv input {
+    background-color: grey;
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .row {
+    width: 100%;
+  }
+  .ratingnum {
+    display: none;
+  }
+  a.brand {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
-.wrapperanimation a{
-  display: block;
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #333;
-  border: 2px solid #333;
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
+@media (max-width: 756px) {
+  .dropdown {
+    display: inline-block;
+    position: relative;
+    font-size: 10px;
+  }
+  .dropdown-content {
+    position: absolute;
+    display: none;
+    right: 0;
+    font-size: 10px;
+    min-width: 11rem;
+    padding: 8px;
+    z-index: 1;
+    background-color: #203040;
+    margin: 0;
+    margin-top: 0.4rem;
+    border-radius: 0.5rem;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .badge {
+    position: absolute;
+    top: 25%;
+    margin-left: 4px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    background-color: var(--green-color);
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+  .form {
+    width: 90%;
+  }
+
+  .populartitle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .loginform {
+    width: 100%;
+  }
+
+  .loginform input {
+    background-color: none;
+  }
+
+  .loginform .form {
+    box-shadow: none;
+  }
+  .result {
+    font-size: 20px;
+  }
+  .fdisplay {
+    width: 100%;
+    background-color: var(--green-color);
+    text-align: center;
+    display: block;
+    cursor: pointer;
+  }
+  .filtersection {
+    display: none;
+    transition: 3s all ease;
+  }
+  .filtersection.showfilter {
+    display: block;
+    transition: 3s ease all;
+  }
 }
 
-.wrapperanimation button{
-  position: relative;
-  z-index: 2;
+@media (max-width: 756px) {
+  .rownavbar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .rowcart {
+    width: 100%;
+    flex-direction: column;
+  }
+  .col-2 {
+    width: 100%;
+  }
+  .ordersection {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .loginimg {
+    margin-top: 50px;
+    width: 90%;
+    height: 15%;
+  }
 }
-
-.wrapperanimation a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff003b;
-  transition: all .35s;
-}
-
-.wrapperanimation a:hover{
-  color: #fff;
-}
-
-.wrapperanimation a:hover:after{
-  width: 100%;
-} */
-/* 
-.wrapperanimation {
-  background-color: red;
-}
-
-
-.wrapperanimation a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff003b;
-  transition: all .35s;
-}
-
-.wrapperanimation a:hover{
-  color: #fff;
-}
-
-.wrapperanimation a:hover:after{
-  width: 100%;
-}  */
