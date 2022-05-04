@@ -47,6 +47,7 @@ export default function SigninScreen(props) {
               id="email"
               placeholder="Enter email"
               required
+              className="p-[1rem]"
               onChange={(e) => setEmail(e.target.value)}
             ></input>
           </div>
@@ -56,13 +57,14 @@ export default function SigninScreen(props) {
               type="password"
               id="password"
               placeholder="Enter password"
+              className="p-[1rem]"
               required
               onChange={(e) => setPassword(e.target.value)}
             ></input>
           </div>
           <div>
             <label />
-            <button className="greenbtn" type="submit">
+            <button className="bg-[#08AD76] text-[white] p-[1rem] " type="submit">
               Daxil Ol
             </button>
           </div>

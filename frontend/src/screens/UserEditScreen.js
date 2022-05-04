@@ -91,8 +91,8 @@ export default function UserEditScreen(props) {
               ></input>
             </div>
             <div>
-              <button type="submit" className="greenbtn mt-[15px]">
-                Update
+              <button type="submit" className="bg-[#08AD76] text-[white] p-[1rem] mt-[15px]">
+                Güncəllə
               </button>
             </div>
           </>

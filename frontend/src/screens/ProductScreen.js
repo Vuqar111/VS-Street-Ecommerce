@@ -72,7 +72,7 @@ export default function ProductScreen(props) {
               <div className="content ">
                 <h1 className="productname">{product.name}</h1>
                 <h6 className="font-bold text-[#08AD76]">
-                  Məhsul Kodu: <span>#089754</span>
+                  Məhsul Kodu: <span>{product._id}</span>
                 </h6>
                 <h6 className="font-bold ">
                   Marka: <span>VS-FASHION</span>
@@ -226,7 +226,7 @@ export default function ProductScreen(props) {
                       <div>
                         <label />
                         <button
-                          className="bg-[#08AD76] text-[white]"
+                          className="bg-[#08AD76] text-[white] p-[1rem]"
                           type="submit"
                         >
                           Göndər
@@ -273,6 +273,7 @@ const Wrapper = styled.div`
   .productname {
     font-size: 45px;
     font-weight: bold;
+    margin: 0px;
   }
 
   select {
@@ -284,7 +285,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 500px;
+    height: 550px;
     background-color: #f6f6f4;
   }
 

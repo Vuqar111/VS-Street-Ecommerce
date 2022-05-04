@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { saveShippingAddress } from "../actions/cartActions";
 import CheckoutSteps from "../components/CheckoutSteps";
-import Select from "react-select";
 import { Link } from "react-router-dom";
-import data from '../data.json';
+import data from "../data.json";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import MessageBox from "../components/MessageBox";
 import { AiFillDelete } from "react-icons/ai";
 import { AiFillCloseCircle } from "react-icons/ai";
-
 
 export default function CartScreen(props) {
   const productId = props.match.params.id;
@@ -17,8 +15,8 @@ export default function CartScreen(props) {
     ? Number(props.location.search.split("=")[1])
     : 1;
 
-  const size = props.location.search ? props.location.search.split("=")[3] : 1;
-  const color = props.location.search ? props.location.search.split("=")[5] : 1;
+  const size = props.location.search ? props.location.search.split("=")[3] : "L";
+  const color = props.location.search ? props.location.search.split("=")[5] : "Black";
 
   const cart = useSelector((state) => state.cart);
   const { cartItems, error } = cart;
@@ -42,22 +40,18 @@ export default function CartScreen(props) {
 
   const { userInfo } = userSignin;
   const { shippingAddress } = cart;
-  const [lat, setLat] = useState(shippingAddress.lat);
-  const [lng, setLng] = useState(shippingAddress.lng);
-  const userAddressMap = useSelector((state) => state.userAddressMap);
-  const { address: addressMap } = userAddressMap;
 
   if (!userInfo) {
     props.history.push("/signin");
   }
   const [fullName, setFullName] = useState(shippingAddress.fullName);
-  const [phonenumber,setPhoneNumber] = useState(shippingAddress.phoneNumber);
+  const [phonenumber, setPhoneNumber] = useState(shippingAddress.phoneNumber);
   const [address, setAddress] = useState(shippingAddress.address);
   const [city, setCity] = useState(shippingAddress.city);
   const [region, setRegion] = useState(shippingAddress.city);
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
   const [country, setCountry] = useState(shippingAddress.country);
-  
+
 
 
   const submitHandler = (e) => {
@@ -81,18 +75,15 @@ export default function CartScreen(props) {
     }
   };
 
-
-console.log(cartItems.reduce((a, c) => a + c.qty, 0));
-
-  
-
+  // props.history.push(`/placeorder`);
+  //     dispatch({ type: ORDER_CREATE_RESET });
+ 
   // generate the link when both dropdowns are selected
   // useEffect(() => {
   //   if (country && lang) {
   //     setLink(`https://www.${country.url}/search?q=Clue+Mediator&gl=${country.country_code}&hl=${lang.code}`);
   //   }
   // }, [country, lang]);
-
 
   const [openmenu, setOpenMenu] = useState(false);
   return (
@@ -161,7 +152,7 @@ console.log(cartItems.reduce((a, c) => a + c.qty, 0));
             <li className="flex  justify-between">
               <div className="font-bold">Məhsullar</div>
               <div>
-                ({cartItems.reduce((a, c) => a + c.qty, 0)} məhsul) : 
+                ({cartItems.reduce((a, c) => a + c.qty, 0)} məhsul) :
                 {cartItems.reduce((a, c) => a + c.price * c.qty, 0)} Azn
               </div>
             </li>
@@ -173,14 +164,17 @@ console.log(cartItems.reduce((a, c) => a + c.qty, 0));
             <li className="flex  justify-between">
               <div className="font-bold">Ümumi Qiymət</div>
               <div>
-                {cartItems.reduce((a, c) => a + c.qty, 0) > 5 ? cartItems.reduce((a, c) => a + c.price * c.qty, 0) + 10 : cartItems.reduce((a, c) => a + c.price * c.qty, 0)} Azn
-                 Azn</div>
+                {cartItems.reduce((a, c) => a + c.qty, 0) > 5
+                  ? cartItems.reduce((a, c) => a + c.price * c.qty, 0) + 10
+                  : cartItems.reduce((a, c) => a + c.price * c.qty, 0)}{" "}
+                Azn Azn
+              </div>
             </li>
             <li>
               <button
                 type="button"
                 onClick={() => setOpenMenu(true)}
-                className=" w-[100%] bg-[#08AD76] text-[white] "
+                className=" w-[100%] bg-[#08AD76] text-[white] p-[1rem]"
                 disabled={cartItems.length === 0}
               >
                 Sifarişi tamamla
@@ -189,10 +183,10 @@ console.log(cartItems.reduce((a, c) => a + c.qty, 0));
               <Link to="/">
                 <button
                   type="button"
-                  className="w-[100%] bg-[white] border-solid border-2 border-[black]"
+                  className="w-[100%] bg-[white] border-solid border-2 border-[black] p-[1rem]"
                   disabled={cartItems.length === 0}
                 >
-                 Alış-verişə davam et
+                  Alış-verişə davam et
                 </button>
               </Link>
             </li>
@@ -203,20 +197,17 @@ console.log(cartItems.reduce((a, c) => a + c.qty, 0));
       <div className={openmenu ? "shippingadress open" : "shippingadress"}>
         <CheckoutSteps step1 step2></CheckoutSteps>
 
-
         <form className="formshipping" onSubmit={submitHandler}>
           <div className="text-center font-bold text-[20px]">
-            <h1 className="mt-[15px]">Shipping Address</h1>
+            <h1 className="mt-[15px]">Çatdırılma Adresi</h1>
           </div>
 
-     
-
           <div className="shippingdiv">
-            <label htmlFor="fullName">Ad Soyad</label>
+            <label htmlFor="fullName">Tam Ad</label>
             <input
               type="text"
               id="fullName"
-              placeholder="Enter full name"
+              placeholder="Tam adınızı daxil edin"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               required
@@ -228,68 +219,65 @@ console.log(cartItems.reduce((a, c) => a + c.qty, 0));
             <input
               type="tel"
               id="phonenumber"
-              placeholder="Enter Phone Number"
+              placeholder="Telefon nömrənizi daxil edin"
               value={phonenumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               required
             ></input>
-          </div>  
+          </div>
 
           <div className="shippingdiv">
-              <label htmlFor="city">Şəhər</label>
-              <input
-                type="text"
-                id="city"
-                placeholder="Enter city"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                required
-              ></input>
-            </div>
+            <label htmlFor="city">Şəhər</label>
+            <input
+              type="text"
+              id="city"
+              placeholder="Şəhəri daxil edin"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              required
+            ></input>
+          </div>
 
+          <div className="shippingdiv">
+            <label htmlFor="region">Rayon</label>
+            <input
+              type="text"
+              id="region"
+              placeholder="Rayonu seçin"
+              value={region}
+              onChange={(e) => setRegion(e.target.value)}
+              required
+            ></input>
+          </div>
 
-            <div className="shippingdiv">
-              <label htmlFor="region">Rayon</label>
-              <input
-                type="text"
-                id="region"
-                placeholder="Rayonu seçin"
-                value={region}
-                onChange={(e) => setRegion(e.target.value)}
-                required
-              ></input>
-            </div>
+          <div className="shippingdiv">
+            <label htmlFor="postalCode">Postal Kod</label>
+            <input
+              type="text"
+              id="postalCode"
+              placeholder="Enter postal code"
+              value={postalCode}
+              onChange={(e) => setPostalCode(e.target.value)}
+              required
+            ></input>
+          </div>
 
-            <div className="shippingdiv">
-              <label htmlFor="postalCode">Postal Kod</label>
-              <input
-                type="text"
-                id="postalCode"
-                placeholder="Enter postal code"
-                value={postalCode}
-                onChange={(e) => setPostalCode(e.target.value)}
-                required
-              ></input>
-            </div>
-       
-
-           <div className="shippingdiv">
-            <label htmlFor="country">Country</label>
+          <div className="shippingdiv">
+            <label htmlFor="country">Ölkə</label>
             <input
               type="text"
               id="country"
-              placeholder="Enter country"
+              placeholder="Ölkəni seçin"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
               required
             ></input>
-          </div> 
-
-
-          
+          </div>
 
           <div className="shippingdiv">
-            <label htmlFor="address" className="ml-[20px]">Tam Address</label>
+            <label htmlFor="address" className="ml-[20px]">
+              Tam Address
+            </label>
             <textarea
               type="text"
               id="address"
@@ -302,13 +290,14 @@ console.log(cartItems.reduce((a, c) => a + c.qty, 0));
 
           <div className="shippingdiv">
             <label />
-            <button className="w-[100%] greenbtn" type="submit">
+            <button
+              className="w-[100%] bg-[#08AD76] text-[white] p-[1rem]"
+              type="submit"
+            >
               Davam Et
             </button>
           </div>
         </form>
-
-
 
         <div className="closeshipping" onClick={() => setOpenMenu(false)}>
           <AiFillCloseCircle />

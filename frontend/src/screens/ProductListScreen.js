@@ -70,9 +70,9 @@ export default function ProductListScreen(props) {
   return (
     <div className="row">
       <div className="w-[100%] flex justify-between items-center">
-        <h1 className="font-bold text-[30px]">Products</h1>
-        <button type="button" className="greenbtn" onClick={createHandler}>
-          Create Product
+        <h1 className="font-bold text-[30px]">Məhsullar</h1>
+        <button type="button" className="bg-[#08AD76] text-[white] p-[1rem]" onClick={createHandler}>
+         Məhsul Yarat
         </button>
       </div>
 
@@ -90,12 +90,12 @@ export default function ProductListScreen(props) {
           <table className="table">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>PRICE</th>
-                <th>CATEGORY</th>
-                <th>BRAND</th>
-                <th>ACTIONS</th>
+                <th>Id</th>
+                <th>Ad</th>
+                <th>Qiymət</th>
+                <th>Kateqoriya</th>
+                <th>Brand</th>
+                <th>Aksiya</th>
               </tr>
             </thead>
             <tbody>
@@ -109,26 +109,26 @@ export default function ProductListScreen(props) {
                   <td>
                     <button
                       type="button"
-                      className="greenbtn"
+                      className="bg-[#08AD76] text-[white] p-[1rem]"
                       onClick={() =>
                         props.history.push(`/product/${product._id}/edit`)
                       }
                     >
-                      Edit
+                      Redaktə Et
                     </button>
                     <button
                       type="button"
-                      className="delbtn"
+                      className="bg-[red] text-[white] p-[1rem]"
                       onClick={() => deleteHandler(product)}
                     >
-                      Delete
+                    Təmizlə
                     </button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <div className="row center pagination">
+          {/* <div className="row center pagination">
             {[...Array(pages).keys()].map((x) => (
               <div className="pagdiv">
                 <Link
@@ -140,7 +140,7 @@ export default function ProductListScreen(props) {
                 </Link>
               </div>
             ))}
-          </div>
+          </div> */}
         </>
       )}
     </div>

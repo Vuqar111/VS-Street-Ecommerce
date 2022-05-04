@@ -36,21 +36,21 @@ export default function OrderHistoryScreen(props) {
                 <td>{order._id}</td>
                 <td>{order.createdAt.substring(0, 10)}</td>
                 <td>{order.totalPrice.toFixed(2)}</td>
-                <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'No'}</td>
+                <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'Ödənilməyib'}</td>
                 <td>
                   {order.isDelivered
                     ? order.deliveredAt.substring(0, 10)
-                    : 'No'}
+                    : 'Yoldadır'}
                 </td>
                 <td>
                   <button
                     type="button"
-                    className="greenbtn"
+                    className="bg-[#08AD76] text-[white] p-[1rem]"
                     onClick={() => {
                       props.history.push(`/order/${order._id}`);
                     }}
                   >
-                    Details
+                    Detallı
                   </button>
                 </td>
               </tr>

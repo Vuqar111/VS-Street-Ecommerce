@@ -7,7 +7,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
-import OrderScreen from "./screens/OrderScreen";
+import OrderScreen from './screens/OrderScreen';
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import ProductListScreen from "./screens/ProductListScreen";
@@ -30,6 +30,8 @@ import MapScreen from "./screens/MapScreen";
 import DashboardScreen from "./screens/DashboardScreen";
 import SupportScreen from "./screens/SupportScreen";
 import Footer from "./components/Footer";
+import ContactForm from "./components/Contact";
+import Help from './components/Help';
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -80,7 +82,7 @@ function App() {
                       <span className="badge">{cartItems.length}</span>
                     )}
                   </div>
-                  <div>Cart</div>
+                  <div>Səbət</div>
                   </div>
                 </Link>
               
@@ -101,6 +103,9 @@ function App() {
                       </li>
                       <li>
                         <Link to="/orderhistory">Sifarişlər</Link>
+                      </li>
+                      <li>
+                        <Link to="/help">Kömək</Link>
                       </li>
                       <li>
                         <Link to="#signout" onClick={signoutHandler}>
@@ -149,6 +154,7 @@ function App() {
                 )}
               </div>
             </div>
+    
 
             {/*   MobileMenu */}
 
@@ -158,9 +164,9 @@ function App() {
               <div className="mobilemenu">
                 <div className="mobileresponsive">
                   <div>
-                    <Link className="brand" to="/">
-                      VS-Fashion
-                    </Link>
+                  <Link className="brand" to="/">
+                VS-<span className="greenlink">Fashion</span>
+              </Link>
                   </div>
                   <div
                     className="mobilecross"
@@ -202,16 +208,16 @@ function App() {
                     <div className="mobiledropdown">
                       <ul className="mobiledropdowncontent">
                         <li>
-                          <Link to="/dashboard">Dashboard</Link>
+                          <Link to="/dashboard">Statistika</Link>
                         </li>
                         <li>
-                          <Link to="/productlist">Products</Link>
+                          <Link to="/productlist">Məhsullar</Link>
                         </li>
                         <li>
-                          <Link to="/orderlist">Orders</Link>
+                          <Link to="/orderlist">Sifarişlər</Link>
                         </li>
                         <li>
-                          <Link to="/userlist">Users</Link>
+                          <Link to="/userlist">İstifadəçilər</Link>
                         </li>
                       </ul>
                     </div>
@@ -235,10 +241,12 @@ function App() {
                 </div>
               </div>
             </div>
+
+
             <div
               className="searchbtn"
               onClick={() => {
-                setSearchmenu(true);
+                setSearchmenu(!searchmenu);
               }}
             >
               <AiOutlineSearch />
@@ -270,6 +278,8 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+          <Route path="/contact" component={ContactForm}></Route>
+          <Route path="/help" component={Help}></Route>
           <Route
             path="/search/name/:name?"
             component={SearchScreen}

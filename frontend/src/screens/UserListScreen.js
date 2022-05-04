@@ -30,11 +30,11 @@ export default function UserListScreen(props) {
   };
   return (
     <div className="row">
-      <h1 className="font-bold text-[30px]">Users</h1>
+      <h1 className="font-bold text-[30px]">İstifadəçilər</h1>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
       {successDelete && (
-        <MessageBox variant="success">User Deleted Successfully</MessageBox>
+        <MessageBox variant="success">İstifadəçi uğurla silindi</MessageBox>
       )}
       {loading ? (
         <LoadingBox></LoadingBox>
@@ -44,12 +44,12 @@ export default function UserListScreen(props) {
         <table className="table">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>NAME</th>
-              <th>EMAIL</th>
+              <th>Id</th>
+              <th>Ad</th>
+              <th>Email</th>
 
-              <th>IS ADMIN</th>
-              <th>ACTIONS</th>
+              <th>Admindir?</th>
+              <th>Aksiya</th>
             </tr>
           </thead>
           <tbody>
@@ -59,21 +59,21 @@ export default function UserListScreen(props) {
                 <td>{user.name}</td>
                 <td>{user.email}</td>
 
-                <td>{user.isAdmin ? "YES" : "NO"}</td>
+                <td>{user.isAdmin ? "Bəli" : "Xeyr"}</td>
                 <td>
                   <button
                     type="button"
-                    className="greenbtn"
+                    className="bg-[#08AD76] text-[white] p-[1rem]"
                     onClick={() => props.history.push(`/user/${user._id}/edit`)}
                   >
-                    Edit
+                    Redaktə
                   </button>
                   <button
                     type="button"
-                    className="delbtn"
+                    className="bg-[red] text-[white] p-[1rem]"
                     onClick={() => deleteHandler(user)}
                   >
-                    Delete
+                   Təmizlə
                   </button>
                 </td>
               </tr>

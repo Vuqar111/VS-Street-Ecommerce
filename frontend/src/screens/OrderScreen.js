@@ -1,11 +1,13 @@
 import Axios from 'axios';
-// import { PayPalButton } from 'react-paypal-button-v2';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deliverOrder, detailsOrder, payOrder } from '../actions/orderActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import ReactToPrint from "react-to-print";
+import {AiFillPrinter} from 'react-icons/ai';
+import styled from 'styled-components';
 import {
   ORDER_DELIVER_RESET,
   ORDER_PAY_RESET,
@@ -18,7 +20,7 @@ export default function OrderScreen(props) {
   const { order, loading, error } = orderDetails;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-
+  let componentRef = useRef();
   const orderPay = useSelector((state) => state.orderPay);
   const {
     loading: loadingPay,
@@ -34,7 +36,7 @@ export default function OrderScreen(props) {
   const dispatch = useDispatch();
   useEffect(() => {
     const addPayPalScript = async () => {
-      const { data } = await Axios.get('/api/config/paypal');
+      const { data } = await Axios.get('https://mernbeginnersproject.herokuapp.com/api/config/paypal');
       const script = document.createElement('script');
       script.type = 'text/javascript';
       script.src = `https://www.paypal.com/sdk/js?client-id=${data}`;
@@ -77,48 +79,55 @@ export default function OrderScreen(props) {
   ) : error ? (
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
-    <div className='w-[80%] m-[auto] mt-[30px]'>
-      <h1>Order {order._id}</h1>
-      <div className="placeorder">
-        <div className="col-2">
+    <Wrapper>
+ <div ref={(el) => (componentRef = el)} className='w-[50%] m-[auto]  mt-[30px]  rounded-[15px] p-[20px] border-[30px] orderprintscreen'>
+      <h1 className='text-center text-[30px]'>Sifariş: {order._id}</h1>
+      <div className="w-[80%] m-[auto] p-[30px] flex justify-between items-center orderenterscreen">
+        <div className="w-[100%]"> 
           <ul>
             <li>
               <div className="card card-body">
-                <h2>Shipping</h2>
+                <h2>
+                  <strong>
+                  Çatdırılma Adresi
+                    </strong></h2>
                 <p>
-                  <strong>Name:</strong> {order.shippingAddress.fullName} <br />
-                  <strong>Address: </strong> {order.shippingAddress.address},
+                 {order.shippingAddress.fullName},
+                 {order.shippingAddress.address},
                   {order.shippingAddress.city},{' '}
                   {order.shippingAddress.postalCode},
                   {order.shippingAddress.country}
                 </p>
                 {order.isDelivered ? (
-                  <MessageBox variant="success">
-                    Delivered at {order.deliveredAt}
-                  </MessageBox>
+                  <div >
+                     {order.deliveredAt}-da çatdırıldı
+                  </div>
                 ) : (
-                  <MessageBox variant="danger">Not Delivered</MessageBox>
+                  <div>Yoldadır</div>
                 )}
               </div>
             </li>
             <li>
               <div className="card card-body">
-                <h2>Payment</h2>
+                <h2>
+                <strong>Ödəniş:</strong>
+                </h2>
                 <p>
-                  <strong>Method:</strong> {order.paymentMethod}
+                 {/* {order.paymentMethod} */}
+                 Bank Kartı ilə
                 </p>
                 {order.isPaid ? (
-                  <MessageBox variant="success">
-                    Paid at {order.paidAt}
-                  </MessageBox>
+                  <div variant="success">
+                    {order.paidAt}- tarixində ödənildi
+                  </div>
                 ) : (
-                  <MessageBox variant="danger">Not Paid</MessageBox>
+                  <div >Ödənilməyib</div>
                 )}
               </div>
             </li>
             <li>
               <div className="card card-body">
-                <h2>Order Items</h2>
+                <h2>Sifariş olunan məhsullar</h2>
                 <ul>
                   {order.orderItems.map((item) => (
                     <li key={item.product}>
@@ -148,7 +157,7 @@ export default function OrderScreen(props) {
                         </div>
 
                         <div>
-                          {item.qty} x ${item.price} = ${item.qty * item.price}
+                          {item.qty} x {item.price} azn = {item.qty * item.price} azn
                         </div>
                       </div>
                     </li>
@@ -156,37 +165,6 @@ export default function OrderScreen(props) {
                 </ul>
               </div>
             </li>
-          </ul>
-        </div>
-        <div className="col-1">
-          <div className="card card-body">
-            <ul>
-              <li>
-                <h2>Order Summary</h2>
-              </li>
-              <li>
-                <div className="placeorder">
-                  <div>Items</div>
-                  <div>${order.itemsPrice.toFixed(2)}</div>
-                </div>
-              </li>
-              <li>
-                <div className="placeorder">
-                  <div>Shipping</div>
-                  <div>${order.shippingPrice.toFixed(2)}</div>
-                </div>
-              </li>
-             
-              <li>
-                <div className="placeorder">
-                  <div>
-                    <strong> Order Total</strong>
-                  </div>
-                  <div>
-                    <strong>${order.totalPrice.toFixed(2)}</strong>
-                  </div>
-                </div>
-              </li>
               {!order.isPaid && (
                 <li>
                   {!sdkReady ? (
@@ -197,7 +175,7 @@ export default function OrderScreen(props) {
                         <MessageBox variant="danger">{errorPay}</MessageBox>
                       )}
                       {loadingPay && <LoadingBox></LoadingBox>}
-<button className='w-[100%] greenbtn'>ODE</button>
+                  <button className='w-[100%] greenbtn p-[1rem]'>ÖDƏNİŞİ EDİN {order.totalPrice.toFixed(2)} Azn</button>
                     </>
                   )}
                 </li>
@@ -210,17 +188,53 @@ export default function OrderScreen(props) {
                   )}
                   <button
                     type="button"
-                    className="greenbtn block"
+                    className="bg-[#08AD76] text-[white] p-[1rem] block"
                     onClick={deliverHandler}
                   >
-                    Deliver Order
+                    Catdirilmani tamamla
                   </button>
                 </li>
               )}
             </ul>
-          </div>
         </div>
+        <ReactToPrint
+          trigger={() => <button className='printbtn'><AiFillPrinter/></button>}
+          content={() => componentRef}
+        />
       </div>
     </div>
+    </Wrapper>
+   
   );
 }
+
+
+const Wrapper = styled.div`
+.printbtn {
+  position: absolute;
+  top: 22%;
+  right: 28%;
+  background: #08AD76;
+   color: white;
+   padding: 15px;
+}
+@media(max-width: 768px){
+  .orderprintscreen{
+    width: 90%;
+  }
+  .orderprintscreen h1 {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .orderenterscreen {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .printbtn {
+   top: 17%;
+   right: 13%;
+  }
+}
+
+`

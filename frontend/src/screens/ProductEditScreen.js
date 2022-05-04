@@ -67,13 +67,14 @@ export default function ProductEditScreen(props) {
   const { userInfo } = userSignin;
 
 
+
   const uploadFileHandler = async (e) => {
     const file = e.target.files[0];
     const bodyFormData = new FormData();
     bodyFormData.append('image', file);
     setLoadingUpload(true);
     try {
-      const { data } = await Axios.post('https://mernbeginnersproject.herokuapp.com/api/uploads', bodyFormData, {
+      const { data } = await Axios.post('/api/uploads', bodyFormData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${userInfo.token}`,
@@ -87,11 +88,13 @@ export default function ProductEditScreen(props) {
     }
   };
 
+
+  
   return (
     <div>
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1 className='mt-[30px]  text-[35px] font-bold'>Edit Product: {productId}</h1>
+          <h1>Edit Product {productId}</h1>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -106,6 +109,7 @@ export default function ProductEditScreen(props) {
               <input
                 id="name"
                 type="text"
+                className='p-[1rem]'
                 placeholder="Enter name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -116,6 +120,7 @@ export default function ProductEditScreen(props) {
               <input
                 id="price"
                 type="text"
+                className='p-[1rem]'
                 placeholder="Enter price"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
@@ -126,6 +131,7 @@ export default function ProductEditScreen(props) {
               <input
                 id="image"
                 type="text"
+                className='p-[1rem]'
                 placeholder="Enter image"
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
@@ -137,6 +143,7 @@ export default function ProductEditScreen(props) {
                 type="file"
                 id="imageFile"
                 label="Choose Image"
+                className='p-[1rem]'
                 onChange={uploadFileHandler}
               ></input>
               {loadingUpload && <LoadingBox></LoadingBox>}
@@ -149,6 +156,7 @@ export default function ProductEditScreen(props) {
               <input
                 id="category"
                 type="text"
+                className='p-[1rem]'
                 placeholder="Enter category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
@@ -159,6 +167,7 @@ export default function ProductEditScreen(props) {
               <input
                 id="brand"
                 type="text"
+                className='p-[1rem]'
                 placeholder="Enter brand"
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
@@ -169,17 +178,19 @@ export default function ProductEditScreen(props) {
               <input
                 id="countInStock"
                 type="text"
+                className='p-[1rem]'
                 placeholder="Enter countInStock"
                 value={countInStock}
                 onChange={(e) => setCountInStock(e.target.value)}
               ></input>
             </div>
-            <div>
+            <div >
               <label htmlFor="description">Description</label>
               <textarea
                 id="description"
                 rows="3"
                 type="text"
+                className='p-[1rem]'
                 placeholder="Enter description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
@@ -187,7 +198,7 @@ export default function ProductEditScreen(props) {
             </div>
             <div>
               <label></label>
-              <button className="greenbtn" type="submit">
+              <button className="bg-[#08AD76] text-[white] p-[1rem] " type="submit">
                 Update
               </button>
             </div>

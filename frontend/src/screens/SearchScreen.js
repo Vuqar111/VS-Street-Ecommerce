@@ -72,10 +72,10 @@ export default function SearchScreen(props) {
             }}
           >
             
-            <option value="newest">Newest Arrivals</option>
-            <option value="lowest">Price: Low to High</option>
-            <option value="highest">Price: High to Low</option>
-            <option value="toprated">Avg. Customer Reviews</option>
+            <option value="newest">Ən yeni gələnlər</option>
+            <option value="lowest">Qiymət: Azdan Çoxa</option>
+            <option value="highest">Qiymət: Çoxdan Aza</option>
+            <option value="toprated">Müştəri rəyləri</option>
           </select>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function SearchScreen(props) {
                     className={'all' === category ? 'active' : ''}
                     to={getFilterUrl({ category: 'all' })}
                   >
-                    Any
+                    Hamısı
                   </Link>
                 </li>
                 {categories.map((c) => (
@@ -139,7 +139,7 @@ export default function SearchScreen(props) {
                     to={getFilterUrl({ rating: r.rating })}
                     className={`${r.rating}` === `${rating}` ? 'active' : ''}
                   >
-                    <Rating caption={' & up'} rating={r.rating}></Rating>
+                    <Rating caption={' və yuxarı'} rating={r.rating}></Rating>
                   </Link>
                 </li>
               ))}
@@ -159,7 +159,7 @@ export default function SearchScreen(props) {
               {products.length === 0 && (
                 <MessageBox>Axtarışınıza uyğun nəticə tapılmadı</MessageBox>
               )}
-              <div className="flex justify-between flex-wrap">
+              <div className="flex justify-between flex-wrap homeproducts">
                 {products.map((product) => (
                   <Product key={product._id} product={product}></Product>
                 ))}

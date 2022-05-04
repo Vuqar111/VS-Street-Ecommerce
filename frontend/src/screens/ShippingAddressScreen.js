@@ -128,7 +128,7 @@ export default function ShippingAddressScreen(props) {
 
         <div>
           <label />
-          <button className="greenbtn" type="submit">
+          <button className="bg-[#08AD76] text-[white] p-[1rem]" type="submit">
             Continue
           </button>
         </div>

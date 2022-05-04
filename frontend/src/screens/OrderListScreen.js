@@ -30,7 +30,7 @@ export default function OrderListScreen(props) {
   };
   return (
     <div className='row'>
-      <h1  className="font-bold text-[30px]">Orders</h1>
+      <h1  className="font-bold text-[30px]">Sifarişlər</h1>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
       {loading ? (
@@ -41,13 +41,13 @@ export default function OrderListScreen(props) {
         <table className="table">
           <thead>
             <tr>
-              <th>ID</th>
+              <th>Id</th>
               {/* <th>USER</th> */}
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>PAID</th>
-              <th>DELIVERED</th>
-              <th>ACTIONS</th>
+              <th>Tarix</th>
+              <th>Ümumi</th>
+              <th>Ödənilib</th>
+              <th>Çatdırılıb</th>
+              <th>Aksiya</th>
             </tr>
           </thead>
           <tbody>
@@ -57,28 +57,28 @@ export default function OrderListScreen(props) {
                 {/* <td>{order.user.name}</td> */}
                 <td>{order.createdAt.substring(0, 10)}</td>
                 <td>{order.totalPrice.toFixed(2)}</td>
-                <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'No'}</td>
+                <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'Yoldadır'}</td>
                 <td>
                   {order.isDelivered
                     ? order.deliveredAt.substring(0, 10)
-                    : 'No'}
+                    : 'Yoldadır'}
                 </td>
                 <td>
                   <button
                     type="button"
-                    className="greenbtn"
+                    className="bg-[#08AD76] text-[white] p-[1rem]"
                     onClick={() => {
                       props.history.push(`/order/${order._id}`);
                     }}
                   >
-                    Details
+                    Detallı
                   </button>
                   <button
                     type="button"
-                    className="delbtn"
+                    className="bg-[red] text-[white] p-[1rem]"
                     onClick={() => deleteHandler(order)}
                   >
-                    Delete
+                    Təmizlə
                   </button>
                 </td>
               </tr>

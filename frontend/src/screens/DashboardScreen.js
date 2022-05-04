@@ -15,7 +15,7 @@ export default function DashboardScreen() {
   return (
     <div>
       <div>
-        <h1 className='text-center font-bold text-[20px] mt-[15px]'>Dashboard</h1>
+        <h1 className='text-center font-bold text-[20px] mt-[15px]'>Statistika</h1>
       </div>
       {loading ? (
         <LoadingBox />
@@ -27,7 +27,7 @@ export default function DashboardScreen() {
             <li>
               <div className="summary-title color1">
                 <span>
-                  <i className="fa fa-users" /> Users
+                  <i className="fa fa-users" /> İstifadəçilər
                 </span>
               </div>
               <div className="summary-body">{summary.users[0].numUsers}</div>
@@ -35,7 +35,7 @@ export default function DashboardScreen() {
             <li>
               <div className="summary-title color2">
                 <span>
-                  <i className="fa fa-shopping-cart" /> Orders
+                  <i className="fa fa-shopping-cart" /> Sifarişlər
                 </span>
               </div>
               <div className="summary-body">
@@ -45,22 +45,23 @@ export default function DashboardScreen() {
             <li>
               <div className="summary-title color3">
                 <span>
-                  <i className="fa fa-money" /> Sales
+                  <i className="fa fa-money" /> Qazanc
                 </span>
               </div>
               <div className="summary-body">
-                $
+                
                 {summary.orders[0]
                   ? summary.orders[0].totalSales.toFixed(2)
-                  : 0}
+                  : 0} Azn
               </div>
             </li>
           </ul>
           <div>
             <div>
-              <h2 className='text-center font-bold text-[20px] mt-[15px]'>Sales</h2>
+              <h2 className='text-center font-bold text-[20px] mt-[15px]'>Satışlar</h2>
               {summary.dailyOrders.length === 0 ? (
-                <MessageBox>No Sale</MessageBox>
+                <MessageBox>Satış yoxdur, Biznesinizi bağlayın
+                </MessageBox>
               ) : (
                 <Chart
                   width="100%"
@@ -76,9 +77,9 @@ export default function DashboardScreen() {
             </div>
           </div>
           <div>
-            <h2 className='text-center font-bold text-[20px] mt-[15px]'>Categories</h2>
+            <h2 className='text-center font-bold text-[20px] mt-[15px]'>Kateqoriya</h2>
             {summary.productCategories.length === 0 ? (
-              <MessageBox>No Category</MessageBox>
+              <MessageBox>Heç bir kateqoriya yoxdur</MessageBox>
             ) : (
               <Chart
                 width="100%"

@@ -6,6 +6,9 @@ import CheckoutSteps from "../components/CheckoutSteps";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+import styled from "styled-components";
+import masterpng from "../assets/master.png";
+import {AiOutlineSearch} from 'react-icons/ai';
 
 export default function PlaceOrderScreen(props) {
   const cart = useSelector((state) => state.cart);
@@ -33,67 +36,46 @@ export default function PlaceOrderScreen(props) {
   }, [dispatch, order, props.history, success]);
 
   return (
-    <div className="w-[80%] m-[auto] mt-[50px]">
+    <Wrapper>
+<div className="w-[80%] m-[auto] mt-[50px]">
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       <div className="placeorder">
         <div className="col-2">
-          <ul>
+          <ul className="w-[100%]  flex justify-between ulplace">
             <li>
               <div className="card card-body">
-                <h2>Çatdırılma</h2>
+                <h2 className="text-[30px]">
+                  <strong>Çatdırılma Adresi</strong>
+                </h2>
                 <p>
-                  <strong>Ad:</strong> {cart.shippingAddress.fullName} <br />
-                  <strong>Ünvan: </strong> {cart.shippingAddress.address},
-                  {cart.shippingAddress.city}, {cart.shippingAddress.postalCode}
-                  ,{cart.shippingAddress.country}
+                  {cart.shippingAddress.fullName}, <br />
+                  {cart.shippingAddress.address}, <br />
+                  {cart.shippingAddress.city}, <br />
+                  {cart.shippingAddress.postalCode}, <br />
+                  {cart.shippingAddress.country}
                 </p>
               </div>
             </li>
             <li>
               <div className="card card-body">
-                <h2>Ödəniş</h2>
-                <p>
-                  <strong>Metod:</strong> Bank kartı ilə
-                </p>
-              </div>
-            </li>
-            <li>
-              <div className="card card-body">
-                <h2>Sifariş olunan məhsullar</h2>
-                <ul>
-                  {cart.cartItems.map((item) => (
-                    <li key={item.product}>
-                      <div className="placeorder">
-                        <div>
-                          <img
-                            src={item.image}
-                            alt={item.name}
-                            className="small"
-                          ></img>
-                        </div>
-                        <div className="min-30">
-                          <Link to={`/product/${item.product}`}>
-                            {item.name}
-                          </Link>
-                        </div>
-                        <div>{item.size}</div>
-                        <div>{item.color}</div>
-                        <div>
-                          {item.qty} x ${item.price} = ${item.qty * item.price}
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+                <h2 className="text-[30px]">
+                  <strong>Ödəniş</strong>
+                </h2>
+                <img
+                  src={masterpng}
+                  className="w-[200px] h-[40px]"
+                  alt="masterimg"
+                />
+                <p>Metod: Bank kartı ilə</p>
               </div>
             </li>
           </ul>
         </div>
-        <div className="col-1">
+        <div className="col-1 placeordercheckout">
           <div className="card card-body">
             <ul>
               <li>
-                <h2>Sifariş özəti</h2>
+                <h2 className="text-[25px] font-bold">Sifariş özəti</h2>
               </li>
               <li>
                 <div className="placeorder">
@@ -127,10 +109,10 @@ export default function PlaceOrderScreen(props) {
                 <button
                   type="button"
                   onClick={placeOrderHandler}
-                  className="greenbtn block"
+                  className="w-[100%] bg-[#08AD76] text-[white] p-[1rem]"
                   disabled={cart.cartItems.length === 0}
                 >
-                  ÖDƏ
+                  ÖDƏNİŞ EDİN
                 </button>
               </li>
               {loading && <LoadingBox></LoadingBox>}
@@ -139,6 +121,73 @@ export default function PlaceOrderScreen(props) {
           </div>
         </div>
       </div>
+      <hr className="mt-[20px]" />
+      <div className="orderproducts w-[60%]">
+        <li>
+          <div className="card card-body">
+            <h2 className="text-[20px] font-bold">Sifariş olunan məhsullar</h2>
+            <ul className="mt-[15px]">
+              {cart.cartItems.map((item) => (
+                <li key={item.product}>
+                  <div className="placeorder">
+                    <div>
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="small"
+                      ></img>
+                    </div>
+                    <div className="min-30">
+                      <Link to={`/product/${item.product}`}>{item.name}</Link>
+                    </div>
+                    <div>{item.size}</div>
+                    <div>{item.color}</div>
+                    <div>
+                      {item.qty} x azn {item.price} = {item.qty * item.price}{" "}
+                      azn
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </li>
+ 
+      </div>
     </div>
+    </Wrapper>
   );
 }
+
+
+const Wrapper = styled.div`
+
+
+.placeordercheckout {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (max-width: 768px) {
+  .ulplace {
+  width: 100%;
+  flex-direction: column;
+}
+
+.ulplace h2 {
+  font-size: 15px;
+}
+.placeordercheckout {
+  padding: 5px;
+  width: 100%;
+  margin-top: 15px;
+  box-shadow: none;
+} 
+.orderproducts {
+  width: 100%;
+}
+}
+
+
+`

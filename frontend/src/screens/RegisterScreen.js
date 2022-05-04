@@ -60,6 +60,7 @@ export default function RegisterScreen(props) {
               type="text"
               id="name"
               placeholder="Enter name"
+              className="p-[10px]"
               required
               onChange={(e) => setName(e.target.value)}
             ></input>
@@ -70,6 +71,7 @@ export default function RegisterScreen(props) {
               type="email"
               id="email"
               placeholder="Enter email"
+              className="p-[10px]"
               required
               onChange={(e) => setEmail(e.target.value)}
             ></input>
@@ -80,6 +82,7 @@ export default function RegisterScreen(props) {
               type="password"
               id="password"
               placeholder="Enter password"
+              className="p-[10px]"
               required
               onChange={(e) => setPassword(e.target.value)}
             ></input>
@@ -90,13 +93,14 @@ export default function RegisterScreen(props) {
               type="password"
               id="confirmPassword"
               placeholder="Enter confirm password"
+              className="p-[10px]"
               required
               onChange={(e) => setConfirmPassword(e.target.value)}
             ></input>
           </div>
           <div>
             <label />
-            <button className="greenbtn" type="submit">
+            <button className="bg-[#08AD76] text-[white] p-[1rem]" type="submit">
               Qeydiyyat
             </button>
           </div>

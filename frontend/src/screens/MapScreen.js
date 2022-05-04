@@ -24,7 +24,7 @@ export default function MapScreen(props) {
 
   useEffect(() => {
     const fetch = async () => {
-      const { data } = await Axios('/api/config/google');
+      const { data } = await Axios('https://mernbeginnersproject.herokuapp.com/api/config/google');
       setGoogleApiKey(data);
       getUserCurrentLocation();
     };
@@ -109,7 +109,7 @@ export default function MapScreen(props) {
           >
             <div className="map-input-box">
               <input type="text" placeholder="Enter your address"></input>
-              <button type="button" className="greenbtn" onClick={onConfirm}>
+              <button type="button" className="bg-[#08AD76] text-[white] p-[1rem]" onClick={onConfirm}>
                 Confirm
               </button>
             </div>

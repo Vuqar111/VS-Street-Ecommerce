@@ -30,23 +30,20 @@ export default function HomeScreen() {
      <FeaturedContent/>
      <PopularCategories/>
       <div className='home'>
-      <h2 className='populartitle'><span className='clipspan'>Popular</span> Products</h2>
+      <h2 className='populartitle'><span className='clipspan'>Məşhur</span>Məhsullar</h2>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <h1>
-          f
-        </h1>
-        // <>
-        //   {products.length === 0 && <MessageBox>İstəyinizə uyğun məhsul tapılmadı</MessageBox>}
-        //   <div className="homeproducts">
-        //     {products.slice(0,3).map((product) => (
-        //       <Product key={product._id} product={product}></Product>
-        //     ))}
-        //   </div>
-        // </>
+        <>
+          {products.length === 0 && <MessageBox>İstəyinizə uyğun məhsul tapılmadı</MessageBox>}
+          <div className="homeproducts">
+            {products.slice(0,3).map((product) => (
+              <Product key={product._id} product={product}></Product>
+            ))}
+          </div>
+        </>
       )}
       </div>
       <Features/>

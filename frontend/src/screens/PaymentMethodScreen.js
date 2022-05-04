@@ -44,7 +44,7 @@ export default function PaymentMethodScreen(props) {
           </div>
         </div>
         <div>
-          <button className="greenbtn" type="submit">
+          <button className="bg-[#08AD76] text-[white] p-[1rem]" type="submit">
             Davam Et
           </button>
         </div>
