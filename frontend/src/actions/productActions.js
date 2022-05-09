@@ -72,6 +72,7 @@ export const detailsProduct = (productId) => async (dispatch) => {
     });
   }
 };
+
 export const createProduct = () => async (dispatch, getState) => {
   dispatch({ type: PRODUCT_CREATE_REQUEST });
   const {

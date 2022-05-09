@@ -30,7 +30,13 @@ import {
   userUpdateProfileReducer,
   userUpdateReducer,
 } from './reducers/userReducers';
-
+import {
+  couponListReducer,
+  couponDeleteReducer,
+  couponCreateReducer, 
+  couponUpdateReducer,
+  couponDetailsReducer,
+} from './reducers/couponReducers';
 const initialState = {
   userSignin: {
     userInfo: localStorage.getItem('userInfo')
@@ -73,6 +79,11 @@ const reducer = combineReducers({
   productReviewCreate: productReviewCreateReducer,
   userAddressMap: userAddressMapReducer,
   orderSummary: orderSummaryReducer,
+  couponList: couponListReducer,
+  couponDetails: couponDetailsReducer,
+  couponCreate: couponCreateReducer,
+  couponUpdate: couponUpdateReducer,
+  couponDelete: couponDeleteReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import image1 from "../assets/image1.jpg";
-import image2 from "../assets/image2.jpg";
-import image3 from "../assets/image3.jpg";
-import image4 from "../assets/image4.jpg";
 
 const FeaturedContent = () => {
   return (
@@ -21,16 +17,14 @@ const FeaturedContent = () => {
         <div className="infodiv">
           <div className="secondinfodiv">
             <h1>
-              We are Experts <br /> in Building Dreams
+             T-shirt ideyan var? <br /> Gerçəkləşdirərik!
             </h1>
             <p>
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in
+              Beləki ağlında olan dizaynın şəklini və detallarını bizim e-mailimizə atmaqla arzularını gerçəkləşdirə bilərsəniz.
             </p>
-            <Link to="/cart">
-              <button>Explore More</button>
-            </Link>
+            <a href="mailto:infovsstreet@mail.ru">
+              <button>Stilini gerçəkləşdir</button>
+            </a>
           </div>
         </div>
       </div>

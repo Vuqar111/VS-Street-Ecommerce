@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -11,17 +11,20 @@ const Footer = () => {
           <a href="/">
             <h2 className="navtitle">
               <Link className="brandfooter" to="/">
-                VS-<span className="greenlink">Fashion</span>
+                VS-<span className="greenlink">Street</span>
               </Link>
             </h2>
           </a>
         </div>
 
         <div>
-          Haqqımızda
+          Biz Kimik?
           <ul>
+          <li>
+            <Link to="/about">Haqqımızda</Link></li>
             <li>050-519-87-54</li>
-            <li>info@vsfashion.az</li>
+            <li>
+              infovsstreet@mail.ru</li>
             <li>
               <Link to='/contact'>
               Əlaqə
@@ -33,20 +36,29 @@ const Footer = () => {
         <div>
           Profil
           <ul>
-            <li>Daxil Olmaq</li>
-            <li>Qeydiyyatdan keçmək</li>
-            <li>Sifarişlərim</li>
-            <li>Səbət</li>
+            <li>
+              <Link to="/signin">Daxil Olmaq</Link></li>
+            <li>   <Link to="/register">Qeydiyyatdan keçmək</Link></li>
+            <li>
+              <Link to="/orderhistory">Sifarişlərim</Link>
+              </li>
+            <li>
+              <Link to="/cart">Səbət</Link></li>
           </ul>
         </div>
 
         <div>
-          Social Media
-          <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Pinterest</li>
-            <li>Tumbir</li>
+          <ul className="w-[100%] flex justify-between mt-[0px] m-[10px] ">
+            <li className="text-[30px] text-[#08AD76]">
+              <a href="https://www.linkedin.com/in/vugar-hasanov-7518b7212/"> <FaInstagram/></a>
+              </li>
+              <li className="text-[30px]  text-[#08AD76]">
+              <a href="https://wa.me/994505198754"> <FaWhatsapp/></a>
+              </li>
+              <li className="text-[25px]  text-[#08AD76]">
+              <a href="https://www.linkedin.com/in/vugar-hasanov-7518b7212/"> <FaTiktok/></a>
+              </li>
+            
           </ul>
         </div>
       </div>
@@ -79,7 +91,9 @@ const Container = styled.footer`
     font-size: 36px;
     line-height: 54px;
   }
-
+.brandfooter {
+  color: black;
+}
   .footer {
     width: 80%;
     display: flex;

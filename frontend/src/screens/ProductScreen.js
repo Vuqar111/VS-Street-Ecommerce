@@ -75,7 +75,7 @@ export default function ProductScreen(props) {
                   Məhsul Kodu: <span>{product._id}</span>
                 </h6>
                 <h6 className="font-bold ">
-                  Marka: <span>VS-FASHION</span>
+                  Marka: <span>VS-STREET</span>
                 </h6>
                 <h3 className="mt-[8px] mb-[8px] text-[28px] font-semibold">
                   {product.price} Azn

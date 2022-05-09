@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import image1 from "../assets/image1.jpg";
-import image2 from "../assets/image2.jpg";
 import tshirtvsfashion from '../assets/tshirtvsfashion.jpg';
 import tshirt2vsfashion from '../assets/tshirt2vsfashion.jpeg';
 const PopularCategories = () => {
@@ -20,13 +17,13 @@ const PopularCategories = () => {
           <p className="subimglink">Kəşf Et</p>
         </div>
         <div className="smalldiv m-[10px]">
-          <img src={image2} alt="image" />
+          <img src="https://images.pexels.com/photos/10506075/pexels-photo-10506075.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="image" />
           <h3 className="subimglinkh3">Hoodie Kolleksiyası</h3>
           <p className="subimglink">Kəşf Et</p>
         </div>
         <div className="smalldiv m-[10px]">
           <img src={tshirt2vsfashion} alt="image" />
-          <h3 className="subimglinkh3">VsFashion Kolleksiyası</h3>
+          <h3 className="subimglinkh3">VsStreet Kolleksiyası</h3>
           <p className="subimglink">Kəşf Et</p>
         </div>
       </div>

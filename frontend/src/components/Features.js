@@ -1,34 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
-import {TiTick} from 'react-icons/ti'
+import {BsSpeedometer} from 'react-icons/bs'
+import {BiSupport} from 'react-icons/bi'
+import {IoMdCreate} from 'react-icons/io'
 const Features = () => {
   return (
       <Wrapper>
-      <h2 className='mt-[30px] text-[35px] text-center font-bold'><span className='clipspan'>About</span> US</h2>
-      <p className='text-[20px] text-center'>Lorem lorem lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+      <h2 className='mt-[30px] text-[35px] text-center font-bold'><span className='clipspan'>Keyfiyyətimiz</span>Fərqimizdir</h2>
+     
       <div className='flex justify-between  flex-wrap mt-[20px]'>
           <div className='fbox'>
            <div className='bg-[#3CBE93] p-[10px] rounded-[10px]'>
-            <TiTick/>
+            <BsSpeedometer/>
            </div>
-           <h3 className='font-bold text-[20px]'>Flexible</h3>
-           <p>Lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum</p>
+           <h3 className='font-bold text-[20px]'>Sürətli və keyfiyyətli çatdırılma xidməti</h3>
+           <p>Sifarişlər ölkə daxili həyata keçirilir</p>
           </div>
 
           <div className='fbox'>
            <div className='bg-[#3CBE93] p-[10px] rounded-[10px]'>
-            <TiTick/>
+            <IoMdCreate/>
            </div>
-           <h3 className='font-bold text-[20px]'>WordClass</h3>
-           <p>Lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum</p>
+           <h3 className='font-bold text-[20px]'>Öz dizaynını yaratma imkanı</h3>
+           <p>İstədiyiniz dizaynda paltarları istehsal edirik</p>
           </div>
 
           <div className='fbox'>
            <div className='bg-[#3CBE93] p-[10px] rounded-[10px]'>
-            <TiTick/>
+            <BiSupport/>
            </div>
-           <h3 className='font-bold text-[20px]'>Durable</h3>
-           <p>Lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum</p>
+           <h3 className='font-bold text-[20px]'>7/24 Dəstək</h3>
+           <p>İstənilən vaxtda suallarınızı cavablandırmaq üçün burdayıq</p>
           </div>
       </div>
       </Wrapper>

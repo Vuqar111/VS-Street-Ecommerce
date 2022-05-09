@@ -7,7 +7,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
-import OrderScreen from './screens/OrderScreen';
+import OrderScreen from "./screens/OrderScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import ProductListScreen from "./screens/ProductListScreen";
@@ -24,23 +24,22 @@ import SearchBox from "./components/SearchBox";
 import SubSearch from "./components/SubSearch";
 import SearchScreen from "./screens/SearchScreen";
 import { listProductCategories } from "./actions/productActions";
-import LoadingBox from "./components/LoadingBox";
-import MessageBox from "./components/MessageBox";
+import CouponListScreen from "./screens/CouponListScreen";
+import CouponEditScreen from "./screens/CouponEditScreen";
 import MapScreen from "./screens/MapScreen";
 import DashboardScreen from "./screens/DashboardScreen";
 import SupportScreen from "./screens/SupportScreen";
 import Footer from "./components/Footer";
 import ContactForm from "./components/Contact";
-import Help from './components/Help';
+import About from "./components/About";
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { BsFillPersonFill } from 'react-icons/bs';
-import {RiAdminLine} from 'react-icons/ri';
+import { BsFillPersonFill } from "react-icons/bs";
+import { RiAdminLine } from "react-icons/ri";
 function App() {
   const cart = useSelector((state) => state.cart);
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -62,7 +61,7 @@ function App() {
           <div className="row">
             <div>
               <Link className="brand" to="/">
-                VS-<span className="greenlink">Fashion</span>
+                VS-<span className="greenlink">Street</span>
               </Link>
             </div>
             <div>
@@ -73,8 +72,7 @@ function App() {
               ></Route>
             </div>
             <div className="desktopmenu">
-            
-                <Link to="/cart">
+              <Link to="/cart">
                 <div className="flex justify-center items-center flex-col	">
                   <div className="text-[25px]">
                     <AiOutlineShoppingCart />
@@ -83,9 +81,9 @@ function App() {
                     )}
                   </div>
                   <div>Səbət</div>
-                  </div>
-                </Link>
-              
+                </div>
+              </Link>
+
               <div>
                 {userInfo ? (
                   <div className="dropdown">
@@ -94,7 +92,7 @@ function App() {
                         <div className="text-[25px]">
                           <BsFillPersonFill />
                         </div>
-                        <div>Salam,{userInfo.name}</div>
+                        <div>{userInfo.name}</div>
                       </div>
                     </Link>
                     <ul className="dropdown-content">
@@ -105,7 +103,7 @@ function App() {
                         <Link to="/orderhistory">Sifarişlər</Link>
                       </li>
                       <li>
-                        <Link to="/help">Kömək</Link>
+                        <Link to="/contact">Kömək</Link>
                       </li>
                       <li>
                         <Link to="#signout" onClick={signoutHandler}>
@@ -116,12 +114,12 @@ function App() {
                   </div>
                 ) : (
                   <Link to="/signin">
-                     <div className="flex justify-center items-center flex-col	">
-                        <div className="text-[25px]">
-                          <BsFillPersonFill />
-                        </div>
-                        <div>Daxil Ol</div>
+                    <div className="flex justify-center items-center flex-col	">
+                      <div className="text-[25px]">
+                        <BsFillPersonFill />
                       </div>
+                      <div>Daxil Ol</div>
+                    </div>
                   </Link>
                 )}
               </div>
@@ -149,12 +147,14 @@ function App() {
                       <li>
                         <Link to="/userlist">İstifadəçilər</Link>
                       </li>
+                      <li>
+                        <Link to="/couponlist">Kuponlar</Link>
+                      </li>
                     </ul>
                   </div>
                 )}
               </div>
             </div>
-    
 
             {/*   MobileMenu */}
 
@@ -164,9 +164,9 @@ function App() {
               <div className="mobilemenu">
                 <div className="mobileresponsive">
                   <div>
-                  <Link className="brand" to="/">
-                VS-<span className="greenlink">Fashion</span>
-              </Link>
+                    <Link className="brand" to="/">
+                      VS-<span className="greenlink">Street</span>
+                    </Link>
                   </div>
                   <div
                     className="mobilecross"
@@ -201,7 +201,7 @@ function App() {
                       </ul>
                     </div>
                   ) : (
-                    <Link to="/signin">Sign In</Link>
+                    <Link to="/signin">Daxil Ol</Link>
                   )}
 
                   {userInfo && userInfo.isAdmin && (
@@ -242,7 +242,6 @@ function App() {
               </div>
             </div>
 
-
             <div
               className="searchbtn"
               onClick={() => {
@@ -279,7 +278,7 @@ function App() {
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
           <Route path="/contact" component={ContactForm}></Route>
-          <Route path="/help" component={Help}></Route>
+          <Route path="/about" component={About}></Route>
           <Route
             path="/search/name/:name?"
             component={SearchScreen}
@@ -308,6 +307,16 @@ function App() {
           <AdminRoute
             path="/productlist"
             component={ProductListScreen}
+            exact
+          ></AdminRoute>
+          <AdminRoute
+            path="/couponlist"
+            component={CouponListScreen}
+            exact
+          ></AdminRoute>
+          <AdminRoute
+            path="/coupon/:id/edit"
+            component={CouponEditScreen}
             exact
           ></AdminRoute>
           <AdminRoute

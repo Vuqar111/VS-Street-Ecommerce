@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { createOrder } from "../actions/orderActions";
@@ -8,13 +8,19 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import styled from "styled-components";
 import masterpng from "../assets/master.png";
-import {AiOutlineSearch} from 'react-icons/ai';
 
 export default function PlaceOrderScreen(props) {
   const cart = useSelector((state) => state.cart);
   if (!cart.paymentMethod) {
     props.history.push("/payment");
   }
+  const couponList = useSelector((state) => state.couponList);
+  const { coupons } = couponList;
+
+  const [chosenCoupon , setChosenCoupon] = useState("")
+  
+
+
   const orderCreate = useSelector((state) => state.orderCreate);
   const { loading, success, error, order } = orderCreate;
   const toPrice = (num) => Number(num.toFixed(2)); // 5.123 => "5.12" => 5.12
@@ -22,18 +28,30 @@ export default function PlaceOrderScreen(props) {
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
   cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
-  cart.taxPrice = toPrice(0.0 * cart.itemsPrice);
-  cart.totalPrice = cart.itemsPrice + cart.shippingPrice;
+  cart.taxPrice = toPrice(cart.itemsPrice * 0.2);
+  cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
+
+
+ 
+
   const dispatch = useDispatch();
   const placeOrderHandler = () => {
     dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
   };
+ 
+  
+
+
   useEffect(() => {
     if (success) {
       props.history.push(`/order/${order._id}`);
       dispatch({ type: ORDER_CREATE_RESET });
     }
   }, [dispatch, order, props.history, success]);
+
+
+
+
 
   return (
     <Wrapper>
@@ -66,7 +84,7 @@ export default function PlaceOrderScreen(props) {
                   className="w-[200px] h-[40px]"
                   alt="masterimg"
                 />
-                <p>Metod: Bank kartı ilə</p>
+              
               </div>
             </li>
           </ul>
@@ -152,7 +170,15 @@ export default function PlaceOrderScreen(props) {
             </ul>
           </div>
         </li>
- 
+      {/* <li>
+        <div>
+          <form onSubmit={submithandler}>
+          <input  type="text" placeOrder="Kupon daxil edin" onChange={(e) => setChosenCoupon(e.target.value)}/>
+          <button type="submit">Check Promo</button>
+          </form>
+          
+        </div>
+      </li> */}
       </div>
     </div>
     </Wrapper>

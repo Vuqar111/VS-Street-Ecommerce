@@ -9,7 +9,7 @@ const DiscountPopup = () => {
     <Wrapper>
       <div className={closePopup ? 'discountmodal active' : 'discountmodal'}>
         <div>
-          <h2>VS-Fashionda Endirim var</h2>
+          <h2>VS-Streetda Endirim var</h2>
           <p>
             lorem lorem loem lorem lorem lroeom lroem lroem lorem lorem lorem
             lorme lorem lorem lorem loem{" "}

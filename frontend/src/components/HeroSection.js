@@ -1,31 +1,23 @@
 import React from "react";
-import tshirt from "../assets/t-shirtimg.png";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
-import image3 from "../assets/image3.jpg";
-import image4 from "../assets/image4.jpg";
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
+
 const HeroSection = () => {
   return (
     <Wrapper>
       <div className="main">
         <div className="content">
           <h1 className="herotitle">
-            <span className="clipspan">VS-Fashion</span>-da <br /> öz
-            tərzini yarat
+            <span className="clipspan">VS-Street</span>-da <br /> öz
+            tərzini kəşf et
           </h1>
           <p>
-            Dimension of reality that makes change possible and understandable.
-            An indefinite and homogeneous environment in which natural events
-            and human existence take place.
+          Öz geyim stilinizə uyğun bir çox geyim nümunəsiylə tanış olun. Tərzinizi "VS-Street"-də bizimlə birgə kəşf edin. Yüzlərlə fərqli növ geyim sizi gözləyir.
           </p>
-          <Link to="/">
+          <Link to="/search/name">
             <button type="button" className="bg-[#08AD76] text-[white] p-[1rem] homebtn">
-              Bizi kəşf et
+               Kəşf et
             </button>
           </Link>
         </div>
