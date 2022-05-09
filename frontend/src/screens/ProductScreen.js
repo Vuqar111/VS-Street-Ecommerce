@@ -52,7 +52,7 @@ export default function ProductScreen(props) {
         createReview(productId, { rating, comment, name: userInfo.name })
       );
     } else {
-      alert("Please enter comment and rating");
+      alert("Zəhmət olmasa rəyinizi əlavə edin");
     }
   };
   return (
@@ -300,7 +300,9 @@ const Wrapper = styled.div`
     margin-left: 30px;
     padding: 20px;
   }
-
+.carttext {
+  font-size: 25px;
+}
   @media (max-width: 768px) {
     width: 95%;
     .main {

@@ -24,9 +24,8 @@ export default function OrderHistoryScreen(props) {
             <tr>
               <th>Sifariş kodu</th>
               <th>Tarix</th>
-              <th>Çatdırılma</th>
               <th>Məbləğ</th>
-              <th>Status</th>
+            
               <th>Aksiya</th>
             </tr>
           </thead>
@@ -36,12 +35,12 @@ export default function OrderHistoryScreen(props) {
                 <td>{order._id}</td>
                 <td>{order.createdAt.substring(0, 10)}</td>
                 <td>{order.totalPrice.toFixed(2)}</td>
-                <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'Ödənilməyib'}</td>
-                <td>
+                {/* <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'Ödənilməyib'}</td> */}
+                {/* <td>
                   {order.isDelivered
                     ? order.deliveredAt.substring(0, 10)
                     : 'Yoldadır'}
-                </td>
+                </td> */}
                 <td>
                   <button
                     type="button"

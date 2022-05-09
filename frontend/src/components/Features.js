@@ -55,6 +55,13 @@ margin-top: 80px;
     height: 100%;
     background: var(--white-color);
     padding: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 1s;
+}
+.fbox:hover {
+    transition: 1s;
+    transform: scale(1.1);
 }
 .fbox div,h3, p {
     padding-top: 10px;

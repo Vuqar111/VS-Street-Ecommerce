@@ -42,6 +42,7 @@ const Wrapper = styled.div`
     max-width: 300px;
     width: 100%;
     height: 350px;
+    transition: all 0.5s ease-in-out;
   }
   .boximg img {
     width: 100%;

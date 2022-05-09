@@ -173,7 +173,7 @@ export default function OrderScreen(props) {
                     </ul>
                   </div>
                 </li>
-                {!order.isPaid && (
+                {/* {!order.isPaid && (
                   <li>
                     {!sdkReady ? (
                       <LoadingBox></LoadingBox>
@@ -189,8 +189,8 @@ export default function OrderScreen(props) {
                       </> 
                     )}
                   </li>
-                )}
-                {userInfo.isAdmin && order.isPaid && !order.isDelivered && (
+                )} */}
+                {/* {userInfo.isAdmin && order.isPaid && !order.isDelivered && (
                   <li>
                     {loadingDeliver && <LoadingBox></LoadingBox>}
                     {errorDeliver && (
@@ -204,7 +204,7 @@ export default function OrderScreen(props) {
                       Catdirilmani tamamla
                     </button>
                   </li>
-                )}
+                )} */}
               </ul>
             </div>
             <ReactToPrint
@@ -228,7 +228,7 @@ export default function OrderScreen(props) {
             <br />
             <br />
 
-            <div className="  orderinfofooter">
+            <div className="orderinfofooter">
               <div >
                 <Link><FaInstagram/></Link>
               </div>
@@ -284,7 +284,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     margin-top: 20px;
     font-size: 30px;
-    color: red;
+    color: #08AD76;
   }
   @media (max-width: 768px) {
     .orderprintscreen {
