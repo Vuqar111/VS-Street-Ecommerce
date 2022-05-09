@@ -6,8 +6,9 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Product from '../components/Product';
 import Rating from '../components/Rating';
+import SubSearch from '../components/SubSearch';
 import { prices, ratings } from '../utils';
-
+import styled from 'styled-components';
 export default function SearchScreen(props) {
   const {
     name = 'all',
@@ -55,8 +56,12 @@ export default function SearchScreen(props) {
 
   const [filterSection,setFilterSection] = useState(false)
   return (
-    <div>
-      <div className="row">
+    <Wrapper>
+<div>
+      <div className='mobilesearch'>
+        <SubSearch/>
+      </div>
+      <div className="searchscreenrow row">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
@@ -180,5 +185,26 @@ export default function SearchScreen(props) {
         </div>
       </div>
     </div>
+    </Wrapper>
+    
   );
 }
+
+
+const Wrapper = styled.div`
+
+
+.mobilesearch {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobilesearch {
+    display: block;
+  }
+  .result {
+    font-size: 18px;
+  }
+}
+
+`

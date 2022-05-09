@@ -6,7 +6,7 @@ const PopularCategories = () => {
   return (
     <Wrapper>
       <div className="featuredtext">
-        <h1>
+        <h1 className="populartitle">
           <span className="clipspan">Məşhur </span> Kateqoriyalar
         </h1>
       </div>
@@ -179,11 +179,12 @@ const Wrapper = styled.div`
       height: 100%;
     }
     .featuredtext {
-      font-weight: bold;
+      margin-top: 20px;
+      
     }
 
     .featuredtext h1 {
-      font-size: 35px;
+      font-size: 23px;
       color: black;
       font-weight: bolder;
     }

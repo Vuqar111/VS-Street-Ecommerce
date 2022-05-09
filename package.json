@@ -2,7 +2,7 @@
   "name": "vsfashion",
   "type": "module",
   "version": "1.0.0",
-  "description": "VsFashion Commerce Website",
+  "description": "VsStreet Commerce Website",
   "main": "server.js",
   "scripts": {
     "build": "cd frontend && npm install && npm run build",

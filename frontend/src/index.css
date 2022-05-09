@@ -911,6 +911,7 @@ hr {
   }
   .searchbtn {
     position: absolute;
+    top: 15px;
     right: 43px;
     color: white;
     font-size: 2.5rem;
@@ -933,38 +934,45 @@ hr {
     width: 100%;
     text-align: center;
   }
+  
+  .searchbtndiv {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    color: black;
+    background-color: black;
+  }
   .searchmobile i {
     color: white;
-    font-size: 20px;
-  }
-
-  .searchbtndiv {
-    width: 50px;
-    height: 30px;
+   
   }
   .searchmobile h2 {
     color: white;
   }
   .searchmobilediv {
-    width: 95%;
-    height: 35px;
+    width: 100%;
     margin: auto;
+    margin-top: 10px;
     display: flex;
-    background-color: var(--green-color);
+    border: 1px solid green;
+    background-color: white;
   }
   .searchmobilediv input {
-    background-color: grey;
+    background-color: white;
     border-radius: 0px;
     border: none;
     outline: none;
-    color: white;
+    color:  black;
     width: 100%;
     padding: 0px;
     margin: 0px;
     height: 35px;
     font-size: 20px;
   }
-
+  .searchscreenrow {
+    margin-top: 10px;
+  }
   .row {
     width: 100%;
   }
@@ -1020,7 +1028,7 @@ hr {
 
   .populartitle {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 1rem;
   }

@@ -68,6 +68,7 @@ const Wrapper = styled.div`
    
    
     width: auto;
+    
   
   .box {
     min-width: 260px;

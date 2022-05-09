@@ -6,7 +6,7 @@ import {IoMdCreate} from 'react-icons/io'
 const Features = () => {
   return (
       <Wrapper>
-      <h2 className='mt-[30px] text-[35px] text-center font-bold'><span className='clipspan'>Keyfiyyətimiz</span>Fərqimizdir</h2>
+      <h2 className='feauturetitle mt-[30px] text-[35px] text-center font-bold'><span className='clipspan'>Keyfiyyətimiz</span>Fərqimizdir</h2>
      
       <div className='flex justify-between  flex-wrap mt-[20px]'>
           <div className='fbox'>
@@ -72,6 +72,9 @@ margin-top: 80px;
     }
     p {
         font-size: 12px;
+    }
+    .feauturetitle {
+        font-size: 20px;
     }
 }
 `

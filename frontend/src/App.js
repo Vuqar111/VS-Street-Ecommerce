@@ -241,15 +241,12 @@ function App() {
                 </div>
               </div>
             </div>
+            <Link to="/search/name">
+              <div className="searchbtn">
+                <AiOutlineSearch />
+              </div>
+            </Link>
 
-            <div
-              className="searchbtn"
-              onClick={() => {
-                setSearchmenu(!searchmenu);
-              }}
-            >
-              <AiOutlineSearch />
-            </div>
             <div
               className="hamburgermenu"
               onClick={() => {

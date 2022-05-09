@@ -13,6 +13,7 @@ export default function SearchBox(props) {
           type="text"
           name="q"
           id="q"
+          placeholder='Məhsulun adını yazın'
           onChange={(e) => setName(e.target.value)}
         ></input>
         <button type="submit" className='searchbtndiv'>
