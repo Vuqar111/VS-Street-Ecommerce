@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import tshirtvsfashion from '../assets/tshirtvsfashion.jpg';
-import tshirt2vsfashion from '../assets/tshirt2vsfashion.jpeg';
+import {Link} from 'react-router-dom';
 const PopularCategories = () => {
   return (
     <Wrapper>
@@ -12,19 +12,24 @@ const PopularCategories = () => {
       </div>
       <div className="mainpopularsection">
         <div className="smalldiv m-[10px]"> 
-          <img src={tshirtvsfashion} alt="image" />
-          <h3 className="subimglinkh3">Tshirt Kolleksiyası</h3>
+          <img src={tshirtvsfashion} alt="vsstreet" />
+          <Link to="/search/name">
           <p className="subimglink">Kəşf Et</p>
+          </Link>
         </div>
         <div className="smalldiv m-[10px]">
-          <img src="https://images.pexels.com/photos/10506075/pexels-photo-10506075.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="image" />
-          <h3 className="subimglinkh3">Hoodie Kolleksiyası</h3>
+          <img src="https://images.pexels.com/photos/2382255/pexels-photo-2382255.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="vsstreet" />
+          <Link to="/search/name">
           <p className="subimglink">Kəşf Et</p>
+          </Link>
+          
         </div>
         <div className="smalldiv m-[10px]">
-          <img src={tshirt2vsfashion} alt="image" />
-          <h3 className="subimglinkh3">VsStreet Kolleksiyası</h3>
+          <img src="https://images.pexels.com/photos/1868567/pexels-photo-1868567.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="vsstreet" />
+
+          <Link to="/search/name">
           <p className="subimglink">Kəşf Et</p>
+          </Link>
         </div>
       </div>
     </Wrapper>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { createOrder } from "../actions/orderActions";
@@ -14,10 +14,10 @@ export default function PlaceOrderScreen(props) {
   if (!cart.paymentMethod) {
     props.history.push("/payment");
   }
-  const couponList = useSelector((state) => state.couponList);
-  const { coupons } = couponList;
 
-  const [chosenCoupon , setChosenCoupon] = useState("")
+ 
+
+ 
   
 
 

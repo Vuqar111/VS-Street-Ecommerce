@@ -3,11 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { saveShippingAddress } from "../actions/cartActions";
 import CheckoutSteps from "../components/CheckoutSteps";
 import { Link } from "react-router-dom";
-import data from "../data.json";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import MessageBox from "../components/MessageBox";
-import { AiFillDelete } from "react-icons/ai";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiFillDelete, AiFillCloseCircle } from "react-icons/ai";
+
 
 export default function CartScreen(props) {
   const productId = props.match.params.id;
@@ -16,7 +15,7 @@ export default function CartScreen(props) {
     : 1;
 
   const size = props.location.search ? props.location.search.split("=")[3] : "L";
-  const color = props.location.search ? props.location.search.split("=")[5] : "Black";
+  const color = props.location.search ? props.location.search.split("=")[5] : "Qara";
 
   const cart = useSelector((state) => state.cart);
   const { cartItems, error } = cart;

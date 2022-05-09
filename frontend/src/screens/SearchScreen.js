@@ -20,7 +20,7 @@ export default function SearchScreen(props) {
   } = useParams();
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
-  const { loading, error, products, page, pages } = productList;
+  const { loading, error, products } = productList;
 
   const productCategoryList = useSelector((state) => state.productCategoryList);
   const {
