@@ -10,8 +10,8 @@ const HeroSection = () => {
         <div className="content">
           <h1 className="herotitle">
             <span className="clipspan">VS-Street</span>-da <br /> öz
-            tərzini kəşf et
-          </h1>
+            tərzini kəşf et !
+          </h1>       
           <p>
           Öz geyim stilinizə uyğun bir çox geyim nümunəsiylə tanış olun. Tərzinizi "VS-Street"-də bizimlə birgə kəşf edin. Yüzlərlə fərqli növ geyim sizi gözləyir.
           </p>

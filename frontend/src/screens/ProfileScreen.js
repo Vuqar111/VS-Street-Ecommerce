@@ -35,7 +35,7 @@ export default function ProfileScreen() {
     e.preventDefault();
     // dispatch update profile
     if (password !== confirmPassword) {
-      alert("Password and Confirm Password Are Not Matched");
+      alert("Parol və təkrar parol eyni deyil");
     } else {
       dispatch(
         updateUserProfile({
@@ -73,7 +73,7 @@ export default function ProfileScreen() {
               <input
                 id="name"
                 type="text"
-                placeholder="Enter name"
+                placeholder="Adınızı daxil edin"
                 value={name}
                 className="p-[1rem]"
                 onChange={(e) => setName(e.target.value)}
@@ -85,7 +85,7 @@ export default function ProfileScreen() {
                 id="email"
                 type="email"
                 className="p-[1rem]"
-                placeholder="Enter email"
+                placeholder="Email poçtunuzu daxil edin"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
@@ -96,7 +96,7 @@ export default function ProfileScreen() {
                 id="password"
                 type="password"
                 className="p-[1rem]"
-                placeholder="Enter password"
+                placeholder="Parolunuzu daxil edin"
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
             </div>
@@ -106,14 +106,14 @@ export default function ProfileScreen() {
                 id="confirmPassword"
                 type="password"
                 className="p-[1rem]"
-                placeholder="Enter confirm password"
+                placeholder="Parolunuzu təkrar daxil edin"
                 onChange={(e) => setConfirmPassword(e.target.value)}
               ></input>
             </div>
 
             <div>
               <label />
-              <button className="bg-[#08AD76] text-[white]" type="submit">
+              <button className="bg-[#08AD76] text-[white] p-[1rem]" type="submit">
                 Güncəllə
               </button>
             </div>

@@ -7,7 +7,7 @@ const FeaturedContent = () => {
     <Wrapper>
       <div className="featuredtext">
         <h1>
-          <span>Featured</span> Content
+          <span>Dizayn sizdən</span> T-shirt bizdən
         </h1>
       </div>
       <div className="mainfeaturedsection">
