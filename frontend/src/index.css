@@ -829,25 +829,19 @@ hr {
 
 @media(max-width: 768px) {
   .boxmain {
-    width: 140px;
+    width: 100%;
+    max-width: 155px;
     height: 100%;
     margin-top: 10px;
-  
+  background-color: red;
   }
 
-  .boxmain .box {
-    width: 140px;
-    height: 100%;
-    margin-top: 10px;
-    background-color: red;
-    
-  }
  .boxmain .boximg {
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--white-color);
-    max-width: 140px;
+    
     width: 100%;
     height: 220px;
   }
@@ -863,6 +857,14 @@ hr {
 }
 
 
+.homeproductsmain {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 @media (max-width: 756px) {
   ::-webkit-scrollbar {
@@ -895,6 +897,15 @@ hr {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .homeproductsmain {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   header {
