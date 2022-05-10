@@ -83,6 +83,9 @@ export default function ProductScreen(props) {
                 <p className="text-[16px] mt-[8px] font-normal">
                   {product.description}
                 </p>
+                <p className="text-[16px] text-[red] mt-[8px] font-normal">
+                 Note: {product.note}
+                </p>
                 <Rating
                   rating={product.rating}
                   numReviews={product.numReviews}

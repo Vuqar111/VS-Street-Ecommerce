@@ -118,6 +118,7 @@ productRouter.post(
       rating: 0,
       numReviews: 0,
       description: 'vsdescription',
+      note: 'onlyLsize',
     });
     const createdProduct = await product.save();
     res.send({ message: 'Product Created', product: createdProduct });
@@ -138,6 +139,7 @@ productRouter.put(
       product.brand = req.body.brand;
       product.countInStock = req.body.countInStock;
       product.description = req.body.description;
+      product.note = req.body.note;
       const updatedProduct = await product.save();
       res.send({ message: 'Product Updated', product: updatedProduct });
     } else {

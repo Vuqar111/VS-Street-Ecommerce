@@ -15,6 +15,7 @@ export default function ProductEditScreen(props) {
   const [countInStock, setCountInStock] = useState('');
   const [brand, setBrand] = useState('');
   const [description, setDescription] = useState('');
+  const [note, setNote] = useState('');
 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
@@ -42,6 +43,7 @@ export default function ProductEditScreen(props) {
       setCountInStock(product.countInStock);
       setBrand(product.brand);
       setDescription(product.description);
+      setNote(product.note);
     }
   }, [product, dispatch, productId, successUpdate, props.history]);
   const submitHandler = (e) => {
@@ -57,6 +59,7 @@ export default function ProductEditScreen(props) {
         brand,
         countInStock,
         description,
+        note
       })
     );
   };
@@ -194,6 +197,18 @@ export default function ProductEditScreen(props) {
                 placeholder="Enter description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
+              ></textarea>
+            </div>
+            <div >
+              <label htmlFor="note">Note</label>
+              <textarea
+                id="note"
+                rows="3"
+                type="text"
+                className='p-[1rem]'
+                placeholder="Enter note"
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
               ></textarea>
             </div>
             <div>
