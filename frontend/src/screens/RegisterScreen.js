@@ -59,7 +59,7 @@ export default function RegisterScreen(props) {
             <input
               type="text"
               id="name"
-              placeholder="Enter name"
+              placeholder="Adınızı daxil edin"
               className="p-[10px]"
               required
               onChange={(e) => setName(e.target.value)}
@@ -70,7 +70,7 @@ export default function RegisterScreen(props) {
             <input
               type="email"
               id="email"
-              placeholder="Enter email"
+              placeholder="Email ünvanınızı daxil edin"
               className="p-[10px]"
               required
               onChange={(e) => setEmail(e.target.value)}
@@ -81,7 +81,7 @@ export default function RegisterScreen(props) {
             <input
               type="password"
               id="password"
-              placeholder="Enter password"
+              placeholder="Parolunuzu daxil edin"
               className="p-[10px]"
               required
               onChange={(e) => setPassword(e.target.value)}
@@ -92,7 +92,7 @@ export default function RegisterScreen(props) {
             <input
               type="password"
               id="confirmPassword"
-              placeholder="Enter confirm password"
+              placeholder="Parolunuzu təkrar edin"
               className="p-[10px]"
               required
               onChange={(e) => setConfirmPassword(e.target.value)}
@@ -104,7 +104,7 @@ export default function RegisterScreen(props) {
               Qeydiyyat
             </button>
           </div>
-          <p className="text-center font-bold mt-[10px]">OR</p>
+          <p className="text-center font-bold mt-[10px]">VƏ YA</p>
           <div className="mt-[10px] text-center">
             <div className="p-[10px]">
               Hesabın var?{" "}

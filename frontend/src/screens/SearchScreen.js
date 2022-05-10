@@ -84,8 +84,8 @@ export default function SearchScreen(props) {
           </select>
         </div>
       </div>
-      <div className='fdisplay'  onClick={() => setFilterSection(!filterSection)}>
-      Filtrler
+      <div className='fdisplay text-[white]'  onClick={() => setFilterSection(!filterSection)}>
+      Məhsulları filtir et
       </div>
       <div className="row top mt-[30px] ">
         <div className={`${filterSection ? "col1 filtersection showfilter" : "col1 filtersection"}`}>
@@ -164,7 +164,7 @@ export default function SearchScreen(props) {
               {products.length === 0 && (
                 <MessageBox>Axtarışınıza uyğun nəticə tapılmadı</MessageBox>
               )}
-              <div className="flex justify-between flex-wrap homeproducts">
+              <div className="homeproducts">
                 {products.map((product) => (
                   <Product key={product._id} product={product}></Product>
                 ))}

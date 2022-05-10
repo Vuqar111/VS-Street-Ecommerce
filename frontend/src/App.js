@@ -179,7 +179,7 @@ function App() {
                 </div>
                 <div className="pl-[10px] pt-[15px]">
                   <Link to="/cart">
-                    Kart
+                    Səbət
                     {cartItems.length > 0 && (
                       <span className="badge">{cartItems.length}</span>
                     )}

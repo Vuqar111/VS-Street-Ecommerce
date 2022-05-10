@@ -3,7 +3,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import HeroSection from '../components/HeroSection';
 import { listCoupons } from "../actions/couponActions";
 import Features from '../components/Features';
-import Product from '../components/Product';
+import HomeProduct from '../components/HomeProduct';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
@@ -52,7 +52,7 @@ export default function HomeScreen() {
           {products.length === 0 && <MessageBox>İstəyinizə uyğun məhsul tapılmadı</MessageBox>}
           <div className="homeproducts">
             {products.slice(0,3).map((product) => (
-              <Product key={product._id} product={product}></Product>
+              <HomeProduct key={product._id} product={product}></HomeProduct>
             ))}
           </div>
         </>

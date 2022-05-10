@@ -5,7 +5,7 @@ function ContactForm() {
   const [state, handleSubmit] = useForm("mqkngkqn");
   if (state.succeeded) {
       return <div className='w-[60%] m-[auto] text-center flex justify-center flex-col mt-[100px]'>
-          <h1 className='text-[35px]'>
+          <h1 className='text-[35px] md:text-[25px]'>
           Mesajınız üçün təşəkkürlər!
           </h1>
           <br/>
@@ -84,6 +84,16 @@ margin-top: 60px;
     padding: 1rem;
     outline: none;
     border-color: #08AD76;
+}
+
+@media (max-width: 768px) {
+  width: 90%;
+margin: auto;
+margin-top: 60px;
+.contacttitle {
+    font-size: 25px;
+    text-align: center;
+}
 }
 
 

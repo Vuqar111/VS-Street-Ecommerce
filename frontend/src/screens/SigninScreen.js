@@ -41,22 +41,22 @@ export default function SigninScreen(props) {
           {loading && <LoadingBox></LoadingBox>}
           {error && <MessageBox variant="danger">{error}</MessageBox>}
           <div>
-            <label htmlFor="email">Email address</label>
+            <label htmlFor="email">Email ünvanı</label>
             <input
               type="email"
               id="email"
-              placeholder="Enter email"
+              placeholder="Email ünvanınızı daxil edin"
               required
               className="p-[1rem]"
               onChange={(e) => setEmail(e.target.value)}
             ></input>
           </div>
           <div>
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Parol</label>
             <input
               type="password"
               id="password"
-              placeholder="Enter password"
+              placeholder="Parolunuzu daxil edin"
               className="p-[1rem]"
               required
               onChange={(e) => setPassword(e.target.value)}
@@ -68,7 +68,7 @@ export default function SigninScreen(props) {
               Daxil Ol
             </button>
           </div>
-          <p className="text-center font-bold mt-[10px]">OR</p>
+          <p className="text-center font-bold mt-[10px]">VƏ YA</p>
           <div className="mt-[10px] text-center">
             <div className="p-[10px]">
               Hesabın yoxdur ?{" "}
