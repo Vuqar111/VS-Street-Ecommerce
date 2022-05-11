@@ -27,7 +27,6 @@ export default function Product(props) {
 
 const Wrapper = styled.div`
   width: auto;
-  
   .box {
     min-width: 300px;
     height: 100%;
@@ -71,7 +70,7 @@ const Wrapper = styled.div`
     
   
   .box {
-    min-width: 260px;
+    min-width: 280px;
     height: 100%;
     width: 100%;
     margin-top: 10px;

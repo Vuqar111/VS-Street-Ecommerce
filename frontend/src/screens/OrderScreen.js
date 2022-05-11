@@ -89,7 +89,7 @@ export default function OrderScreen(props) {
       <div className="allorder">
         <div
           ref={(el) => (componentRef = el)}
-          className="w-[100%] m-[auto]  mt-[30px]  rounded-[15px] p-[20px] border-[30px] orderprintscreen"
+          className="w-[100%] m-[auto]  mt-[30px]  p-[20px]  orderprintscreen"
         >
           <h1 className="text-center text-[20px]">Sifariş: {order._id}</h1>
           <div className="w-[80%] m-[auto] p-[30px] flex justify-between items-center orderenterscreen">
@@ -287,12 +287,61 @@ const Wrapper = styled.div`
     color: #08AD76;
   }
   @media (max-width: 768px) {
+    .allorder {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .orderinfodetail {
+    width: 95%;
+    padding: 10px;
+    margin-top: 20px;
+    margin: auto;
+  }
+  .orderinfodetail h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .orderinfodetail p {
+    margin-top: 30px;
+    font-weight: bold;
+  }
+  
+  /* w-[100%] m-[auto]  mt-[30px]  rounded-[15px] p-[20px] border-[30px]  */
+  /* w-[80%] m-[auto] p-[30px] flex justify-between items-center */
+    
+    
+  .printbtn {
+    position: absolute;
+    top: 12%;
+    right: 43%;
+    background: #08ad76;
+    color: white;
+    padding: 10px;
+  }
+
+    
     .orderprintscreen {
-      width: 90%;
+      width: 100%;
+      margin: auto;
+      padding: 10px;
+      border: 1px solid #08AD76;
+      margin-top: 30px;
+
+    }
+   
+
+    .orderenterscreen {
+      width: 100%;
+      padding: 0px;
     }
     .orderprintscreen h1 {
-      font-size: 20px;
-      margin-top: 25px;
+      font-size: 15px;
+      margin-top: 30px;
     }
     .orderenterscreen {
       width: 95%;
@@ -303,5 +352,13 @@ const Wrapper = styled.div`
       top: 17%;
       right: 13%;
     }
+    .orderinfofooter {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 30px;
+    color: #08AD76;
+  }
   }
 `;
