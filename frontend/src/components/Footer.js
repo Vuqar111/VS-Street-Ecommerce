@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <ul className="w-[100%] flex justify-between mt-[0px] m-[10px] ">
+          <ul className="w-[10 0%]  flex justify-center mt-[0px] m-[10px] ">
             <li className="text-[30px] text-[#08AD76]">
               <a href="https://www.instagram.com/vs.street_/?hl=tr"> <FaInstagram/></a>
               </li>

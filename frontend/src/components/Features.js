@@ -1,24 +1,30 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styled from 'styled-components';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {BsSpeedometer} from 'react-icons/bs'
 import {BiSupport} from 'react-icons/bi'
 import {IoMdCreate} from 'react-icons/io'
 const Features = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
   return (
       <Wrapper>
       <h2 className='feauturetitle mt-[30px] text-[35px] text-center font-bold'><span className='clipspan'>Keyfiyyətimiz</span>Fərqimizdir</h2>
      
-      <div className='flex justify-between  flex-wrap mt-[20px]'>
-          <div className='fbox'>
-           <div className='bg-[#3CBE93] p-[10px] rounded-[10px]'>
+      <div className='flex justify-between  flex-wrap mt-[20px] fboxmain'>
+          <div className='fbox fade-right'>
+           <div className='bg-[#3CBE93] p-[10px] rounded-[10px] text-[white]'>
             <BsSpeedometer/>
            </div>
-           <h3 className='font-bold text-[20px]'>Sürətli və keyfiyyətli çatdırılma xidməti</h3>
+           <h3 className='font-bold text-[20px] fade-right'>Sürətli və keyfiyyətli çatdırılma xidməti</h3>
            <p>Sifarişlər ölkə daxili həyata keçirilir</p>
           </div>
 
-          <div className='fbox'>
-           <div className='bg-[#3CBE93] p-[10px] rounded-[10px]'>
+          <div className='fbox fade-right'>
+           <div className='bg-[#3CBE93] p-[10px] rounded-[10px] text-[white]'>
             <IoMdCreate/>
            </div>
            <h3 className='font-bold text-[20px]'>Öz dizaynını yaratma imkanı</h3>
@@ -26,7 +32,7 @@ const Features = () => {
           </div>
 
           <div className='fbox'>
-           <div className='bg-[#3CBE93] p-[10px] rounded-[10px]'>
+           <div className='bg-[#3CBE93] p-[10px] rounded-[10px] text-[white]'>
             <BiSupport/>
            </div>
            <h3 className='font-bold text-[20px]'>7/24 Dəstək</h3>
@@ -67,6 +73,9 @@ margin-top: 80px;
     padding-top: 10px;
 }
 @media (max-width: 768px) {
+    .fboxmain {
+        justify-content: center;
+    }
     .fbox {
         margin-top: 10px
     }

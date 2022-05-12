@@ -84,7 +84,7 @@ export default function CartScreen(props) {
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         {cartItems.length === 0 ? (
           <MessageBox>
-            Səbətiniz boşdur. <Link to="/">Alış-verişə başla</Link>
+            Səbətiniz boşdur. <Link to="/search/name">Alış-verişə başla</Link>
           </MessageBox>
         ) : (
           <ul>
