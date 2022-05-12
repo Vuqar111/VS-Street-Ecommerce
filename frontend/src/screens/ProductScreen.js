@@ -31,7 +31,7 @@ export default function ProductScreen(props) {
 
   useEffect(() => {
     if (successReviewCreate) {
-      window.alert("Review Submitted Successfully");
+      window.alert("Rəyiniz uğurla göndərildi");
       setRating("");
       setComment("");
       dispatch({ type: PRODUCT_REVIEW_CREATE_RESET });
