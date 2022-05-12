@@ -2,7 +2,7 @@ import Axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import {  detailsOrder } from "../actions/orderActions";
+import { detailsOrder } from "../actions/orderActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
@@ -69,12 +69,7 @@ export default function OrderScreen(props) {
     }
   }, [dispatch, orderId, sdkReady, successPay, successDeliver, order]);
 
-  // const successPaymentHandler = (paymentResult) => {
-  //   dispatch(payOrder(order, paymentResult));
-  // };
-  // const deliverHandler = () => {
-  //   dispatch(deliverOrder(order._id));
-  // };
+
 
   const infoorder = () => {
     alert("Əziz müştəri, zəhmət olmasa sifariş haqqında məlumatı oxuyun");
@@ -91,7 +86,9 @@ export default function OrderScreen(props) {
           ref={(el) => (componentRef = el)}
           className="w-[100%] m-[auto]  mt-[30px]  p-[20px]  orderprintscreen"
         >
-          <h1 className="text-center text-[20px]">Sifariş: <br/> {order._id}</h1>
+          <h1 className="text-center text-[20px]">
+            Sifariş: <br /> {order._id}
+          </h1>
           <div className="w-[80%] m-[auto] p-[30px] flex justify-between items-center orderenterscreen">
             <div className="w-[100%]">
               <ul>
@@ -219,31 +216,31 @@ export default function OrderScreen(props) {
         </div>
         <div className="orderinfodetail">
           <h1>SİFARİŞ HAQQINDA MƏLUMAT</h1>
-          <p >
+          <p>
             Hörmətli müştəri, Sifarişiniz bitdiyi təqdirdə ödənişi etdikdən
             sonra zəhmət olmasa çekin şəklini chat (online chat, whatsapp və ya
             instagram) vasitəsilə bizə göndərin. Bizi seçdiyiniz üçün təşəkkür
             edirik!
-
             <br />
             <br />
-
             <div className="orderinfofooter">
-              <div >
-                <a href="https://www.instagram.com/vs.street_/?hl=tr"><FaInstagram/></a>
+              <div>
+                <a href="https://www.instagram.com/vs.street_/?hl=tr">
+                  <FaInstagram />
+                </a>
               </div>
               <div>
-              <a href="https://wa.me/994505198754"> <FaWhatsapp/></a>
+                <a href="https://wa.me/994505198754">
+                  {" "}
+                  <FaWhatsapp />
+                </a>
               </div>
-             
             </div>
-
-            
           </p>
           <p className="text-[red]">
-          ****
-                Metrolara çatdırılma pulsuzdur. <br />
-                Poçt-lara və ya ünvana çatdırılma məkandan asılı olaraq minimum 5 azn-dən başlayır
+            **** Metrolara çatdırılma pulsuzdur. <br />
+            Poçt-lara və ünvanlara kargo çatdırılma məkandan asılı olaraq
+            minimum 5 azn-dən başlayır
           </p>
         </div>
       </div>
@@ -282,66 +279,58 @@ const Wrapper = styled.div`
     padding: 10px;
   }
 
-
   .orderinfofooter {
     width: 20%;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     font-size: 30px;
-    color: #08AD76;
+    color: #08ad76;
   }
   .orderprintscreen {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   @media (max-width: 768px) {
     .allorder {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .orderinfodetail {
-    width: 95%;
-    padding: 10px;
-    margin-top: 20px;
-    margin: auto;
-  }
-  .orderinfodetail h1 {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-  }
+      width: 90%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .orderinfodetail {
+      width: 95%;
+      padding: 10px;
+      margin-top: 20px;
+      margin: auto;
+    }
+    .orderinfodetail h1 {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-  .orderinfodetail p {
-    margin-top: 30px;
-    font-weight: bold;
-  }
-  
-  /* w-[100%] m-[auto]  mt-[30px]  rounded-[15px] p-[20px] border-[30px]  */
-  /* w-[80%] m-[auto] p-[30px] flex justify-between items-center */
-    
-    
-  .printbtn {
-    position: absolute;
-    top: 12%;
-    right: 43%;
-    background: #08ad76;
-    color: white;
-    padding: 10px;
-  }
+    .orderinfodetail p {
+      margin-top: 30px;
+      font-weight: bold;
+    }
 
-    
+    .printbtn {
+      position: absolute;
+      top: 12%;
+      right: 43%;
+      background: #08ad76;
+      color: white;
+      padding: 10px;
+    }
+
     .orderprintscreen {
       width: 100%;
       margin: auto;
       padding: 10px;
-      border: 1px solid #08AD76;
+      border: 1px solid #08ad76;
       margin-top: 30px;
-
     }
-   
 
     .orderenterscreen {
       width: 100%;
@@ -361,12 +350,12 @@ const Wrapper = styled.div`
       right: 13%;
     }
     .orderinfofooter {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: 30px;
-    color: #08AD76;
-  }
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 30px;
+      color: #08ad76;
+    }
   }
 `;

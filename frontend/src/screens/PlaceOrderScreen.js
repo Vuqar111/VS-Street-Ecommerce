@@ -94,7 +94,7 @@ export default function PlaceOrderScreen(props) {
               <li className="text-[red]">
                 ****
                 Metrolara çatdırılma pulsuzdur. <br />
-                Poçt-lara və ya ünvana çatdırılma məkandan asılı olaraq minimum 5 azn-dən başlayır
+                Poçt-lara və ünvanlara kargo ilə çatdırılma məkandan asılı olaraq minimum 5 azn-dən başlayır
               </li>
               <li>
                 <div className="placeorder">
