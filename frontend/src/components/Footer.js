@@ -50,14 +50,12 @@ const Footer = () => {
         <div>
           <ul className="w-[100%] flex justify-between mt-[0px] m-[10px] ">
             <li className="text-[30px] text-[#08AD76]">
-              <a href="https://www.linkedin.com/in/vugar-hasanov-7518b7212/"> <FaInstagram/></a>
+              <a href="https://www.instagram.com/vs.street_/?hl=tr"> <FaInstagram/></a>
               </li>
               <li className="text-[30px]  text-[#08AD76]">
               <a href="https://wa.me/994505198754"> <FaWhatsapp/></a>
               </li>
-              <li className="text-[25px]  text-[#08AD76]">
-              <a href="https://www.linkedin.com/in/vugar-hasanov-7518b7212/"> <FaTiktok/></a>
-              </li>
+          
             
           </ul>
         </div>

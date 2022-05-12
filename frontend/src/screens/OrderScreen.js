@@ -91,7 +91,7 @@ export default function OrderScreen(props) {
           ref={(el) => (componentRef = el)}
           className="w-[100%] m-[auto]  mt-[30px]  p-[20px]  orderprintscreen"
         >
-          <h1 className="text-center text-[20px]">Sifariş: {order._id}</h1>
+          <h1 className="text-center text-[20px]">Sifariş: <br/> {order._id}</h1>
           <div className="w-[80%] m-[auto] p-[30px] flex justify-between items-center orderenterscreen">
             <div className="w-[100%]">
               <ul>
@@ -230,15 +230,20 @@ export default function OrderScreen(props) {
 
             <div className="orderinfofooter">
               <div >
-                <Link><FaInstagram/></Link>
+                <a href="https://www.instagram.com/vs.street_/?hl=tr"><FaInstagram/></a>
               </div>
               <div>
-                <Link><FaWhatsapp/></Link>
+              <a href="https://wa.me/994505198754"> <FaWhatsapp/></a>
               </div>
              
             </div>
 
             
+          </p>
+          <p className="text-[red]">
+          ****
+                Metrolara çatdırılma pulsuzdur. <br />
+                Poçt-lara və ya ünvana çatdırılma məkandan asılı olaraq minimum 5 azn-dən başlayır
           </p>
         </div>
       </div>
@@ -285,6 +290,9 @@ const Wrapper = styled.div`
     margin-top: 20px;
     font-size: 30px;
     color: #08AD76;
+  }
+  .orderprintscreen {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   @media (max-width: 768px) {
     .allorder {
