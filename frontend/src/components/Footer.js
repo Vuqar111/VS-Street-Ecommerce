@@ -20,16 +20,14 @@ const Footer = () => {
         <div>
           Biz Kimik?
           <ul>
-          <li>
-            <Link to="/about">Haqqımızda</Link></li>
+            <li>
+              <Link to="/about">Haqqımızda</Link>
+            </li>
             <li>050-519-87-54</li>
+            <li>infovsstreet@mail.ru</li>
             <li>
-              infovsstreet@mail.ru</li>
-            <li>
-              <Link to='/contact'>
-              Əlaqə
-              </Link>
-              </li>
+              <Link to="/contact">Əlaqə</Link>
+            </li>
           </ul>
         </div>
 
@@ -37,26 +35,32 @@ const Footer = () => {
           Profil
           <ul>
             <li>
-              <Link to="/signin">Daxil Olmaq</Link></li>
-            <li>   <Link to="/register">Qeydiyyatdan keçmək</Link></li>
+              <Link to="/signin">Daxil Olmaq</Link>
+            </li>
             <li>
-              <Link to="/orderhistory">Sifarişlərim</Link>
-              </li>
+              {" "}
+              <Link to="/register">Qeydiyyatdan keçmək</Link>
+            </li>
             <li>
-              <Link to="/cart">Səbət</Link></li>
+              <Link to="/cart">Səbət</Link>
+            </li>
           </ul>
         </div>
 
         <div>
           <ul className="w-[10 0%]  flex justify-center mt-[0px] m-[10px] ">
             <li className="text-[30px] text-[#08AD76]">
-              <a href="https://www.instagram.com/vs.street_/?hl=tr"> <FaInstagram/></a>
-              </li>
-              <li className="text-[30px]  text-[#08AD76]">
-              <a href="https://wa.me/994505198754"> <FaWhatsapp/></a>
-              </li>
-          
-            
+              <a href="https://www.instagram.com/vs.street_/?hl=tr">
+                {" "}
+                <FaInstagram />
+              </a>
+            </li>
+            <li className="text-[30px]  text-[#08AD76]">
+              <a href="https://wa.me/994505198754">
+                {" "}
+                <FaWhatsapp />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -89,9 +93,9 @@ const Container = styled.footer`
     font-size: 36px;
     line-height: 54px;
   }
-.brandfooter {
-  color: black;
-}
+  .brandfooter {
+    color: black;
+  }
   .footer {
     width: 80%;
     display: flex;

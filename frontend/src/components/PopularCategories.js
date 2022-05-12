@@ -1,11 +1,9 @@
 import React,{useEffect} from "react";
 import styled from "styled-components";
-import tshirtvsfashion from "../assets/tshirtvsfashion.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { listSeasons } from "../actions/seasonActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
-
 import { Link } from "react-router-dom";
 const PopularCategories = () => {
   const seasonList = useSelector((state) => state.seasonList);
@@ -24,14 +22,6 @@ const PopularCategories = () => {
         </h1>
       </div>
       <div className="mainpopularsection">
-        {/* <Link to="/search/name">
-          <div className="smalldiv m-[10px]">
-            <img src={tshirtvsfashion} alt="vsstreet" />
-            <Link to="/search/name">
-              <p className="subimglink">Kəşf Et</p>
-            </Link>
-          </div>
-        </Link> */}
   {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (

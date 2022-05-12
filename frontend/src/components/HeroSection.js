@@ -88,7 +88,7 @@ const Wrapper = styled.div`
       align-items: center;
       justify-content: center;
       width: 90%;
-      height: auto;
+      height: 400px;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);
 clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);
       background: transparent;
