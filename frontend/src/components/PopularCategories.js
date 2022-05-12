@@ -21,7 +21,7 @@ const PopularCategories = () => {
           <span className="clipspan">Məşhur </span> Kateqoriyalar
         </h1>
       </div>
-      <div className="mainpopularsection">
+      <div className="mainpopularsec">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
@@ -37,11 +37,10 @@ const PopularCategories = () => {
                   <Link to="/search/name">
                     <div key={season._id} className="box">
                       <div className="boximg">
-                        <img src={season.image} alt={season.title} />
+                         <img src={season.image} alt={season.title} />
                       </div>
-
                       <Link to="/search/name">
-                        <p className="subimglink">Explore More</p>
+                        <p className="subimglink">Kəşf Et</p>
                       </Link>
                     </div>
                   </Link>
@@ -101,45 +100,40 @@ const Wrapper = styled.div`
     padding: 10px;
     transform: translateX(-50%);
     color: white;
-    background: #08AD76;
-    
+    background: #08ad76;
   }
 
   @media (max-width: 768px) {
-   
-   
-    width: auto;
-    
-  
-  .box {
-    min-width: 280px;
-    height: 100%;
-    width: 100%;
-    margin-top: 10px;
-  }
-  .boximg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--white-color);
-    max-width: 300px;
-    width: 100%;
-    height: 350px;
-  }
-  .boximg img {
-    width: 100%;
-    height: 100%;
-    max-height: 350px;
-    object-fit: cover;
-  }
-  .footer {
-    margin-top: 5px;
-    h3 {
-      font-size: 15px;
-      font-weight: bold;
+    width: 80%;
+
+    .box {
+      min-width: 280px;
+      height: 100%;
+      width: 100%;
+      margin-top: 10px;
     }
-  }
-    
+    .boximg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--white-color);
+      max-width: 300px;
+      width: 100%;
+      height: 350px;
+    }
+    .boximg img {
+      width: 100%;
+      height: 100%;
+      max-height: 350px;
+      object-fit: cover;
+    }
+    .footer {
+      margin-top: 5px;
+      h3 {
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
   }
 `;
 export default PopularCategories;
