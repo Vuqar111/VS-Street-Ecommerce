@@ -47,7 +47,8 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    max-width: 650px;  
+    width: 70%;
     height: 450px;
     clip-path: polygon(0 18%, 100% 9%, 100% 91%, 0 82%);
     background: grey;
@@ -88,7 +89,8 @@ const Wrapper = styled.div`
       justify-content: center;
       width: 90%;
       height: auto;
-      clip-path: none;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);
+clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);
       background: transparent;
       border-radius: 15px;
       margin-top: 15px;

@@ -158,7 +158,7 @@ export default function CartScreen(props) {
                 {cartItems.reduce((a, c) => a + c.qty, 0) > 5
                   ? cartItems.reduce((a, c) => a + c.price * c.qty, 0) + 10
                   : cartItems.reduce((a, c) => a + c.price * c.qty, 0)}{" "}
-                Azn Azn
+                Azn 
               </div>
             </li>
             <li>
