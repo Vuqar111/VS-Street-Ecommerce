@@ -18,7 +18,8 @@ const Footer = () => {
         </div>
 
         <div>
-          Biz Kimik?
+          <h4 className="text-[20px] font-[bold]">Biz Kimik?</h4>
+          
           <ul>
             <li>
               <Link to="/about">Haqqımızda</Link>
@@ -32,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div>
-          Profil
+        <h4 className="text-[20px] font-[bold]">Profil</h4>
           <ul>
             <li>
               <Link to="/signin">Daxil Olmaq</Link>
