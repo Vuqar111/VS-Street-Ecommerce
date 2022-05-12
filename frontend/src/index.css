@@ -1038,11 +1038,9 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;  
-    color: black;
-    background-color: black;
   }
   .searchmobile i {
-    color: white;
+    color: black;
    
   }
   .searchmobile h2 {

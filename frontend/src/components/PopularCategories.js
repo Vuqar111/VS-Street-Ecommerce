@@ -30,7 +30,7 @@ const PopularCategories = () => {
         <>
           {seasons.length === 0 && <MessageBox>İstəyinizə uyğun kateqoriya tapılmadı</MessageBox>}
           <div className="homeproductsmain">
-          {seasons.map((season) => {
+          {seasons.slice(0,3).map((season) => {
          return (
           <Link to="/search/name">
           <div className="smalldiv m-[10px]">
