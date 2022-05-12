@@ -113,7 +113,7 @@ export default function ProductScreen(props) {
                             value={color}
                             onChange={(e) => setColor(e.target.value)}
                           >
-                            {["Red", "Green", "Blue", "Orange", "Black"].map(
+                            {["Ağ", "Qara", "Mavi", "Narıncı", "Boz"].map(
                               (x) => (
                                 <option key={x} value={x}>
                                   {x}
@@ -133,7 +133,7 @@ export default function ProductScreen(props) {
                             value={size}
                             onChange={(e) => setSize(e.target.value)}
                           >
-                            {["XL", "L", "S", "ML", "R"].map((x) => (
+                            {["S", "M", "L", "XL"].map((x) => (
                               <option key={x} value={x}>
                                 {x}
                               </option>

@@ -17,18 +17,14 @@ export default function PlaceOrderScreen(props) {
 
  
 
- 
-  
-
-
   const orderCreate = useSelector((state) => state.orderCreate);
   const { loading, success, error, order } = orderCreate;
   const toPrice = (num) => Number(num.toFixed(2)); // 5.123 => "5.12" => 5.12
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
-  cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
-  cart.taxPrice = toPrice(cart.itemsPrice * 0.2);
+  cart.shippingPrice = 0;
+  cart.taxPrice = 0;
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
 
 
@@ -95,18 +91,23 @@ export default function PlaceOrderScreen(props) {
               <li>
                 <h2 className="text-[25px] font-bold">Sifariş özəti</h2>
               </li>
+              <li className="text-[red]">
+                ****
+                Metrolara çatdırılma pulsuzdur. <br />
+                Poçt-lara və ya ünvana çatdırılma məkandan asılı olaraq minimum 5 azn-dən başlayır
+              </li>
               <li>
                 <div className="placeorder">
                   <div>Məhsullar</div>
                   <div>{cart.itemsPrice.toFixed(2)} Azn</div>
                 </div>
               </li>
-              <li>
+              {/* <li>
                 <div className="placeorder">
                   <div>Çatdırılma</div>
                   <div>{cart.shippingPrice.toFixed(2)} Azn</div>
                 </div>
-              </li>
+              </li> */}
               <li>
                 <div className="placeorder">
                   <div>Endirim</div>
