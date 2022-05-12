@@ -74,15 +74,7 @@ export default function CartScreen(props) {
     }
   };
 
-  // props.history.push(`/placeorder`);
-  //     dispatch({ type: ORDER_CREATE_RESET });
- 
-  // generate the link when both dropdowns are selected
-  // useEffect(() => {
-  //   if (country && lang) {
-  //     setLink(`https://www.${country.url}/search?q=Clue+Mediator&gl=${country.country_code}&hl=${lang.code}`);
-  //   }
-  // }, [country, lang]);
+
 
   const [openmenu, setOpenMenu] = useState(false);
   return (
@@ -254,24 +246,14 @@ export default function CartScreen(props) {
             <input
               type="text"
               id="postalCode"
-              placeholder="Enter postal code"
+              placeholder="Postal kodu daxin edin"
               value={postalCode}
               onChange={(e) => setPostalCode(e.target.value)}
               required
             ></input>
           </div>
 
-          <div className="shippingdiv">
-            <label htmlFor="country">Ölkə</label>
-            <input
-              type="text"
-              id="country"
-              placeholder="Ölkəni seçin"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-              required
-            ></input>
-          </div>
+     
 
           <div className="shippingdiv">
             <label htmlFor="address" className="ml-[20px]">
@@ -280,7 +262,7 @@ export default function CartScreen(props) {
             <textarea
               type="text"
               id="address"
-              placeholder="Enter address"
+              placeholder="Tam adresi  daxil edin"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               required
@@ -290,7 +272,7 @@ export default function CartScreen(props) {
           <div className="shippingdiv">
             <label />
             <button
-              className="w-[100%] bg-[#08AD76] text-[white] p-[1rem]"
+              className="w-[100%] bg-[#08AD76] text-[white] p-[1rem] mb-[10px]"
               type="submit"
             >
               Davam Et
