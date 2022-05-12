@@ -191,6 +191,7 @@ function App() {
                       <span className="badge">{cartItems.length}</span>
                     )}
                   </Link>
+                   
                   {userInfo ? (
                     <div className="mobiledropdown">
                       <ul className="mobiledropdowncontent">
@@ -225,6 +226,12 @@ function App() {
                         </li>
                         <li>
                           <Link to="/userlist">İstifadəçilər</Link>
+                        </li>
+                        <li>
+                          <Link to="/couponlist">Kuponlar</Link>
+                        </li>
+                        <li>
+                          <Link to="/seasonlist">Model</Link>
                         </li>
                       </ul>
                     </div>
