@@ -26,16 +26,20 @@ import SearchScreen from "./screens/SearchScreen";
 import { listProductCategories } from "./actions/productActions";
 import CouponListScreen from "./screens/CouponListScreen";
 import CouponEditScreen from "./screens/CouponEditScreen";
+import SeasonListScreen from "./screens/SeasonListScreen";
+import SeasonEditScreen from "./screens/SeasonEditScreen";
 import MapScreen from "./screens/MapScreen";
 import DashboardScreen from "./screens/DashboardScreen";
 import SupportScreen from "./screens/SupportScreen";
 import Footer from "./components/Footer";
 import ContactForm from "./components/Contact";
 import About from "./components/About";
-import { AiOutlineClose } from "react-icons/ai";
-import { AiOutlineMenu } from "react-icons/ai";
-import { AiOutlineSearch } from "react-icons/ai";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import {
+  AiOutlineClose,
+  AiOutlineMenu,
+  AiOutlineSearch,
+  AiOutlineShoppingCart,
+} from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 import { RiAdminLine } from "react-icons/ri";
 function App() {
@@ -149,6 +153,9 @@ function App() {
                       </li>
                       <li>
                         <Link to="/couponlist">Kuponlar</Link>
+                      </li>
+                      <li>
+                        <Link to="/seasonlist">Model</Link>
                       </li>
                     </ul>
                   </div>
@@ -316,6 +323,17 @@ function App() {
             component={CouponEditScreen}
             exact
           ></AdminRoute>
+          <AdminRoute
+            path="/season/:id/edit"
+            component={SeasonEditScreen}
+            exact
+          ></AdminRoute>
+          <AdminRoute
+            path="/seasonlist"
+            component={SeasonListScreen}
+            exact
+          ></AdminRoute>
+
           <AdminRoute
             path="/productlist/pageNumber/:pageNumber"
             component={ProductListScreen}

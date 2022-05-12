@@ -1,8 +1,21 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styled from "styled-components";
 import tshirtvsfashion from "../assets/tshirtvsfashion.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { listSeasons } from "../actions/seasonActions";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
+
 import { Link } from "react-router-dom";
 const PopularCategories = () => {
+  const seasonList = useSelector((state) => state.seasonList);
+  const { loading, error, seasons } = seasonList;
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(listSeasons({}));
+  }, [dispatch]);
+
   return (
     <Wrapper>
       <div className="featuredtext">
@@ -11,39 +24,39 @@ const PopularCategories = () => {
         </h1>
       </div>
       <div className="mainpopularsection">
-        <Link to="/search/name">
+        {/* <Link to="/search/name">
           <div className="smalldiv m-[10px]">
             <img src={tshirtvsfashion} alt="vsstreet" />
             <Link to="/search/name">
               <p className="subimglink">Kəşf Et</p>
             </Link>
           </div>
-        </Link>
-
-        <Link to="/search/name">
+        </Link> */}
+  {loading ? (
+        <LoadingBox></LoadingBox>
+      ) : error ? (
+        <MessageBox variant="danger">{error}</MessageBox>
+      ) : (
+        <>
+          {seasons.length === 0 && <MessageBox>İstəyinizə uyğun kateqoriya tapılmadı</MessageBox>}
+          <div className="homeproductsmain">
+          {seasons.map((season) => {
+         return (
+          <Link to="/search/name">
           <div className="smalldiv m-[10px]">
-            <img
-              src="https://images.pexels.com/photos/2382255/pexels-photo-2382255.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt="vsstreet"
-            />
+            <img src={season.image} alt="vsstreet" />
             <Link to="/search/name">
               <p className="subimglink">Kəşf Et</p>
             </Link>
           </div>
         </Link>
-
-        <Link to="/search/name">
-          <div className="smalldiv m-[10px]">
-            <img
-              src="https://images.pexels.com/photos/1868567/pexels-photo-1868567.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt="vsstreet"
-            />
-
-            <Link to="/search/name">
-              <p className="subimglink">Kəşf Et</p>
-            </Link>
+         )
+       })}
           </div>
-        </Link>
+        </>
+      )}
+     
+        
       </div>
     </Wrapper>
   );
@@ -61,22 +74,14 @@ const Wrapper = styled.div`
     align-items: center;
     margin-top: 40px;
   }
-  .imagediv {
-    display: flex;
-    width: 50%;
-  }
 
-  .imagediv2 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-  }
 
   .smalldiv {
     position: relative;
-    width: 300px;
-    height: 400px;
+    max-width: 300px;
     max-height: 600px;
+    width: 100%;
+    height: 400px;
     transition: 1s;
     cursor: pointer;
   }

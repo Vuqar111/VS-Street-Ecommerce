@@ -37,6 +37,13 @@ import {
   couponUpdateReducer,
   couponDetailsReducer,
 } from './reducers/couponReducers';
+import {
+  seasonListReducer,
+  seasonDeleteReducer,
+  seasonCreateReducer, 
+  seasonUpdateReducer,
+  seasonDetailsReducer,
+} from './reducers/seasonReducers';
 const initialState = {
   userSignin: {
     userInfo: localStorage.getItem('userInfo')
@@ -84,6 +91,11 @@ const reducer = combineReducers({
   couponCreate: couponCreateReducer,
   couponUpdate: couponUpdateReducer,
   couponDelete: couponDeleteReducer,
+  seasonList: seasonListReducer,
+  seasonDetails: seasonDetailsReducer,
+  seasonCreate: seasonCreateReducer,
+  seasonUpdate: seasonUpdateReducer,
+  seasonDelete: seasonDeleteReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

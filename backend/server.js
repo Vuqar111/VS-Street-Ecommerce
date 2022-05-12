@@ -7,6 +7,7 @@ import userRouter from "./routers/userRouter.js";
 import orderRouter from "./routers/orderRouter.js";
 import uploadRouter from "./routers/uploadRouter.js";
 import couponRouter from "./routers/couponRouter.js";
+import seasonRouter from "./routers/seasonRouter.js";
 import cors from "cors";
 
 const app = express();
@@ -27,6 +28,7 @@ app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/coupons", couponRouter);
+app.use("/api/seasons", seasonRouter);
 
 app.get("/api/config/paypal", (req, res) => {
   res.send("sb");
