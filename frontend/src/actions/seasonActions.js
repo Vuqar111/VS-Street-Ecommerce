@@ -20,14 +20,7 @@ import {
 export const listSeasons = () => async (dispatch, getState) => {
     dispatch({ type: SEASON_LIST_REQUEST });
     try {
-      const {
-        userSignin: { userInfo },
-      } = getState();
-      const { data } = await Axios.get('/api/seasons', {
-        headers: {
-          Authorization: `Bearer ${userInfo.token}`,
-        },
-      });
+      const { data } = await Axios.get('/api/seasons');
       dispatch({ type: SEASON_LIST_SUCCESS, payload: data });
       console.log(data)
     } catch (error) {
