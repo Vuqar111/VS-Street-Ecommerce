@@ -33,8 +33,8 @@ couponRouter.post(
     isAuth,
     expressAsyncHandler(async (req, res) => {
       const coupon = new Coupon({
-        title: 'sample name ' + Date.now(),
-        code: 'sample name ' + Date.now(),
+        title: 'coupon name' + Date.now(),
+        code: 'coupon code' + Date.now(),
         amount_percent: 10
       });
       const createdCoupon = await coupon.save();

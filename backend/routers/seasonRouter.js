@@ -33,7 +33,7 @@ seasonRouter.post(
     isAuth,
     expressAsyncHandler(async (req, res) => {
       const season = new Season({
-        title: 'sample name ' + Date.now(),
+        title: 'season name' + Date.now(),
         image: '/images/p1.jpg',
       });
       const createdSeason = await season.save();

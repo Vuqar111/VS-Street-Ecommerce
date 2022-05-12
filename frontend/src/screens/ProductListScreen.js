@@ -94,7 +94,7 @@ export default function ProductListScreen(props) {
                 <th>Ad</th>
                 <th>Qiymət</th>
                 <th>Kateqoriya</th>
-                <th>Brand</th>
+                <th>Note</th>
                 <th>Aksiya</th>
               </tr>
             </thead>
@@ -105,7 +105,7 @@ export default function ProductListScreen(props) {
                   <td>{product.name}</td>
                   <td>{product.price}</td>
                   <td>{product.category}</td>
-                  <td>{product.brand}</td>
+                  <td>{product.note}</td>
                   <td>
                     <button
                       type="button"
