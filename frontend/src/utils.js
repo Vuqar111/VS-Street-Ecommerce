@@ -1,23 +1,23 @@
 export const prices = [
   {
-    name: 'Any',
+    name: 'Hamısı',
     min: 0,
     max: 0,
   },
   {
-    name: `1AZN to 10AZN`,
+    name: `1AZN to 50AZN`,
     min: 1,
-    max: 10,
+    max: 50,
   },
   {
-    name: `10AZN to 100AZN`,
-    min: 10,
+    name: `50AZN to 100AZN`,
+    min: 50,
     max: 100,
   },
   {
-    name: `100AZN to 1000AZN`,
+    name: `100AZN to 500AZN`,
     min: 100,
-    max: 1000,
+    max: 500,
   },
 ];
 export const ratings = [
