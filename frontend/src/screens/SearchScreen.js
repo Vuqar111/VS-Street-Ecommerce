@@ -1,21 +1,21 @@
-import React, { useState,useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
-import { listProducts } from '../actions/productActions';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
-import Product from '../components/Product';
-import Rating from '../components/Rating';
-import SubSearch from '../components/SubSearch';
-import { prices, ratings } from '../utils';
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams, Route } from "react-router-dom";
+import { listProducts } from "../actions/productActions";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
+import Product from "../components/Product";
+import Rating from "../components/Rating";
+import SubSearch from "../components/SubSearch";
+import { prices, ratings } from "../utils";
 export default function SearchScreen(props) {
   const {
-    name = 'all',
-    category = 'all',
+    name = "all",
+    category = "all",
     min = 0,
     max = 0,
     rating = 0,
-    order = 'newest',
+    order = "newest",
     pageNumber = 1,
   } = useParams();
   const dispatch = useDispatch();
@@ -32,8 +32,8 @@ export default function SearchScreen(props) {
     dispatch(
       listProducts({
         pageNumber,
-        name: name !== 'all' ? name : '',
-        category: category !== 'all' ? category : '',
+        name: name !== "all" ? name : "",
+        category: category !== "all" ? category : "",
         min,
         max,
         rating,
@@ -53,12 +53,13 @@ export default function SearchScreen(props) {
     return `/search/category/${filterCategory}/name/${filterName}/min/${filterMin}/max/${filterMax}/rating/${filterRating}/order/${sortOrder}/pageNumber/${filterPage}`;
   };
 
-  const [filterSection,setFilterSection] = useState(false)
+  const [filterSection, setFilterSection] = useState(false);
   return (
- 
-<div>
-      <div className='mobilesearch'>
-        <SubSearch/>
+    <div>
+      <div className="appsearch">
+        <Route
+          render={({ history }) => <SubSearch history={history}></SubSearch>}
+        ></Route>
       </div>
       <div className="searchscreenrow row">
         {loading ? (
@@ -66,16 +67,15 @@ export default function SearchScreen(props) {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div className='result'>{products.length} Nəticə</div>
+          <div className="result">{products.length} Nəticə</div>
         )}
-        <div >
+        <div>
           <select
             value={order}
             onChange={(e) => {
               props.history.push(getFilterUrl({ order: e.target.value }));
             }}
           >
-            
             <option value="newest">Ən yeni gələnlər</option>
             <option value="lowest">Qiymət: Azdan Çoxa</option>
             <option value="highest">Qiymət: Çoxdan Aza</option>
@@ -83,12 +83,21 @@ export default function SearchScreen(props) {
           </select>
         </div>
       </div>
-      <div className='fdisplay text-[white]'  onClick={() => setFilterSection(!filterSection)}>
-      Məhsulları filtir et
+      <div
+        className="fdisplay text-[white] p-[5px]"
+        onClick={() => setFilterSection(!filterSection)}
+      >
+        Məhsulları filtir et
       </div>
       <div className="row top mt-[30px] ">
-        <div className={`${filterSection ? "col1 filtersection showfilter" : "col1 filtersection"}`}>
-          <h3 className='font-bold text-[20px]'>Kateqoriyalar</h3>
+        <div
+          className={`${
+            filterSection
+              ? "col1 filtersection showfilter"
+              : "col1 filtersection"
+          }`}
+        >
+          <h3 className="font-bold text-[20px] filtertitle">Kateqoriyalar</h3>
           <div>
             {loadingCategories ? (
               <LoadingBox></LoadingBox>
@@ -98,8 +107,8 @@ export default function SearchScreen(props) {
               <ul>
                 <li>
                   <Link
-                    className={'all' === category ? 'active' : ''}
-                    to={getFilterUrl({ category: 'all' })}
+                    className={"all" === category ? "active" : ""}
+                    to={getFilterUrl({ category: "all" })}
                   >
                     Hamısı
                   </Link>
@@ -107,25 +116,27 @@ export default function SearchScreen(props) {
                 {categories.map((c) => (
                   <li key={c}>
                     <Link
-                      className={c === category ? 'active' : ''}
+                      className={c === category ? "active" : ""}
                       to={getFilterUrl({ category: c })}
                     >
                       {c}
-                                </Link>
+                    </Link>
                   </li>
                 ))}
               </ul>
             )}
           </div>
           <div>
-            <h3 className='font-bold text-[20px] mt-[20px]'>Qiymət</h3>
+            <h3 className="font-bold text-[20px] mt-[20px] filtertitle">
+              Qiymət
+            </h3>
             <ul>
               {prices.map((p) => (
                 <li key={p.name}>
                   <Link
                     to={getFilterUrl({ min: p.min, max: p.max })}
                     className={
-                      `${p.min}-${p.max}` === `${min}-${max}` ? 'active' : ''
+                      `${p.min}-${p.max}` === `${min}-${max}` ? "active" : ""
                     }
                   >
                     {p.name}
@@ -135,23 +146,23 @@ export default function SearchScreen(props) {
             </ul>
           </div>
           <div>
-            <h3 className='font-bold text-[20px] mt-[20px]'>Müştəri rəyləri</h3>
+            <h3 className="font-bold text-[20px] mt-[20px] filtertitle">
+              Müştəri rəyləri
+            </h3>
             <ul>
               {ratings.map((r) => (
                 <li key={r.name}>
                   <Link
                     to={getFilterUrl({ rating: r.rating })}
-                    className={`${r.rating}` === `${rating}` ? 'active' : ''}
+                    className={`${r.rating}` === `${rating}` ? "active" : ""}
                   >
-                    <Rating caption={' və yuxarı'} rating={r.rating}></Rating>
+                    <Rating caption={" və yuxarı"} rating={r.rating}></Rating>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-
-
 
         <div className="col-3">
           {loading ? (
@@ -184,7 +195,5 @@ export default function SearchScreen(props) {
         </div>
       </div>
     </div>
-  
   );
 }
-

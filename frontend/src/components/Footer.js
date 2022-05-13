@@ -49,14 +49,14 @@ const Footer = () => {
         </div>
 
         <div>
-          <ul className="w-[10 0%]  flex justify-center mt-[0px] m-[10px] ">
-            <li className="text-[30px] text-[#08AD76]">
+          <ul className="w-[100%]  flex justify-center mt-[0px] m-[10px] ">
+            <li className="text-[30px] text-[#08AD76] p-[10px]">
               <a href="https://www.instagram.com/vs.street_/?hl=tr">
                 {" "}
                 <FaInstagram />
               </a>
             </li>
-            <li className="text-[30px]  text-[#08AD76]">
+            <li className="text-[30px]  text-[#08AD76] p-[10px]">
               <a href="https://wa.me/994505198754">
                 {" "}
                 <FaWhatsapp />

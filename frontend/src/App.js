@@ -255,6 +255,7 @@ function App() {
                 </div>
               </div>
             </div>
+            <div className="flex justify-between items-center">
             <Link to="/search/name">
               <div className="searchbtn">
                 <AiOutlineSearch />
@@ -269,6 +270,8 @@ function App() {
             >
               <AiOutlineMenu />
             </div>
+            </div>
+            
           </div>
         </header>
 
