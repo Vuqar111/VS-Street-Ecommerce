@@ -833,7 +833,7 @@ hr {
 @media(max-width: 768px) {
   .boxmain {
     width: 100%;
-    max-width: 155px;
+    max-width: 180px;
     height: 100%;
     margin-top: 10px;
   }
@@ -1015,7 +1015,7 @@ hr {
   }
   .searchbtn {
     position: absolute;
-    top: 2%;
+    top: 2.6%;
     right: 40px;
     color: black;
     font-size: 2.5rem;
