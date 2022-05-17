@@ -188,7 +188,7 @@ function App() {
                   <Link to="/cart">
                     Səbət
                     {cartItems.length > 0 && (
-                      <span className="badge">{cartItems.length}</span>
+                      <span className="badge mobilebadge">{cartItems.length}</span>
                     )}
                   </Link>
                    
