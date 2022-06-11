@@ -44,9 +44,6 @@ const Wrapper = styled.div`
   }
 
   .boximg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     max-width: 650px;  
     width: 70%;
     height: 450px;
@@ -84,9 +81,6 @@ const Wrapper = styled.div`
     }
 
     .boximg {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 90%;
       height: 400px;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);

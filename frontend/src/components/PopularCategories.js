@@ -36,7 +36,7 @@ const PopularCategories = () => {
                 return (
                   <Link to="/search/name">
                     <div key={season._id} className="box">
-                      <div className="boximg">
+                      <div className="boximg row">
                          <img src={season.image} alt={season.title} />
                       </div>
                       <Link to="/search/name">

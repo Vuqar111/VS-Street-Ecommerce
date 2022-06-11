@@ -8,7 +8,7 @@ export default function Product(props) {
     <Wrapper>
       <div key={product._id} className="box">
         <Link to={`/product/${product._id}`}>
-        <div className="boximg">
+        <div className="boximg row">
           <img src={product.image} alt={product.title} />
         </div>
         </Link>      
@@ -34,9 +34,6 @@ const Wrapper = styled.div`
     margin-top: 10px;
   }
   .boximg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: var(--white-color);
     max-width: 300px;
     width: 100%;
@@ -76,9 +73,6 @@ const Wrapper = styled.div`
     margin-top: 10px;
   }
   .boximg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: var(--white-color);
     max-width: 300px;
     width: 100%;

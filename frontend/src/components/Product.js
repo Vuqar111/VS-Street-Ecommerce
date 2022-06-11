@@ -7,7 +7,7 @@ export default function Product(props) {
    
       <div key={product._id} className="boxmain">
         <Link to={`/product/${product._id}`}>
-          <div className="boximg">
+          <div className="boximg row">
             <img src={product.image} alt={product.title} />
           </div>
         </Link>

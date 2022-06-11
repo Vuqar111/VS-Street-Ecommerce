@@ -24,7 +24,7 @@ export default function PaymentMethodScreen(props) {
         <div>
           <h1 className="paymenttitle">Ödəniş metodunu təsdiqləyin</h1>
         </div>
-        <div className="paymentdiv row">
+        <div className="paymentdiv row wmax">
           <div>
             <input
               type="radio"

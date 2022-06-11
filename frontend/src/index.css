@@ -26,7 +26,6 @@ body {
   height: 100%;
 }
 .row {
-  width: 80%;
   margin: auto;
   height: auto;
   display: flex;
@@ -41,6 +40,15 @@ body {
 
 .row.start {
   justify-content: flex-start;
+}
+.wmax {
+  width: 100%;
+}
+.wnormal {
+  width: 80%;
+}
+.wmin {
+  width: 60%;
 }
 header {
   height: 12vh;
@@ -127,7 +135,6 @@ select {
   outline: none;
 }
 
-
 .clipspan {
   padding: 10px;
   color: white;
@@ -137,20 +144,8 @@ select {
   font-weight: bolder;
 }
 
-.account {
-  height: auto;
-  width: 100%;
-  margin: auto;
-  background-color: red;
-  font-weight: bold;
-}
 
-.account > div {
-  padding-top: 40px;
-}
-.paymentdiv {
-  width: 100%;
-}
+
 
 .cardimgdiv img {
   width: 200px;
@@ -226,7 +221,6 @@ a.brandfooter {
   color: #ffffff;
   font-size: 1.2rem;
 }
-
 
 .placeorder {
   width: 100%;
@@ -317,17 +311,14 @@ textarea {
   color: var(--green-color);
 }
 
-
-
 .home {
   width: 80%;
   margin: auto;
 }
 
-  .homeproducts {
-    width: 100%;
-  }
-
+.homeproducts {
+  width: 100%;
+}
 
 .reactselect {
   width: 100%;
@@ -337,10 +328,6 @@ textarea {
 .reactselect option {
   width: 300px;
 }
-
-
-
-
 
 .loginimg {
   width: 50%;
@@ -467,8 +454,6 @@ hr {
   display: none;
 }
 
-
-
 /* Form */
 
 .formshipping {
@@ -494,7 +479,6 @@ hr {
   font-weight: bold;
   margin-top: 25px;
 }
-
 
 .formreview {
   width: 100%;
@@ -554,7 +538,6 @@ hr {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 
 /* Checkout Steps */
 .checkout-steps > div {
@@ -688,18 +671,17 @@ hr {
 }
 
 .summary-title.color1 {
-  background-color: #A2FA7F;
+  background-color: #a2fa7f;
   color: white;
 }
 .summary-title.color2 {
-  background-color: #64E332;
+  background-color: #64e332;
   color: white;
 }
 .summary-title.color3 {
-  background-color: #306E18;
+  background-color: #306e18;
   color: white;
 }
-
 
 /* Prodcucts Screeen */
 
@@ -709,9 +691,6 @@ hr {
   margin-top: 10px;
 }
 .boxmain .boximg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: var(--white-color);
   max-width: 300px;
   width: 100%;
@@ -731,13 +710,12 @@ hr {
 }
 .boxmain .footer {
   margin-top: 5px;
-  
 }
 .boxmain .footer h3 {
   margin-top: 5px;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .boxmain {
     width: 100%;
     max-width: 180px;
@@ -748,12 +726,8 @@ hr {
     display: block;
   }
 
- .boxmain .boximg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .boxmain .boximg {
     background: var(--white-color);
-    
     width: 100%;
     height: 220px;
   }
@@ -768,9 +742,6 @@ hr {
   }
 }
 
-
-
-
 .appsearch {
   display: none;
 }
@@ -783,7 +754,6 @@ hr {
   .mainpopularsection {
     display: none;
   }
- 
 
   .closeshipping {
     position: absolute;
@@ -799,7 +769,7 @@ hr {
     margin: auto;
     margin-top: 50px;
   }
-   
+
   .homeproducts {
     width: 97%;
   }
@@ -817,12 +787,6 @@ hr {
   }
   .signinscreen {
     width: 90%;
-    margin: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .shippingadress {
@@ -854,7 +818,9 @@ hr {
   .mainmobilemenu {
     width: 100%;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     z-index: 500;
     position: absolute;
     top: 0%;
@@ -879,11 +845,7 @@ hr {
   }
 
   .mobileresponsive {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 95%;
-    margin: auto;
   }
 
   .mobilecross {
@@ -913,7 +875,7 @@ hr {
     cursor: pointer;
   }
   .filtertitle {
-    font-size:15px;
+    font-size: 15px;
   }
   .hamburgermenu {
     position: absolute;
@@ -932,16 +894,15 @@ hr {
     margin: auto;
     text-align: center;
   }
-  
+
   .searchbtndiv {
     width: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
   }
   .searchmobile i {
     color: black;
-   
   }
   .searchmobile h2 {
     color: white;
@@ -959,7 +920,7 @@ hr {
     border-radius: 0px;
     border: none;
     outline: none;
-    color:  black;
+    color: black;
     width: 100%;
     padding: 0px;
     margin: 0px;

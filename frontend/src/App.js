@@ -62,7 +62,7 @@ function App() {
     <BrowserRouter>
       <div className="w-[100%]">
         <header className="row rownavbar">
-          <div className="row">
+          <div className="row wnormal">
             <div>
               <Link className="brand" to="/">
                 VS-<span className="greenlink">Street</span>
@@ -169,7 +169,7 @@ function App() {
               className={openMobile ? "mainmobilemenu open" : "mainmobilemenu"}
             >
               <div className="mobilemenu">
-                <div className="mobileresponsive">
+                <div className="row">
                   <div>
                     <Link className="brand" to="/">
                       VS-<span className="greenlink">Street</span>
