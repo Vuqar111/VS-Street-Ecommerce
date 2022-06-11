@@ -135,7 +135,7 @@ export default function OrderScreen(props) {
                     <ul>
                       {order.orderItems.map((item) => (
                         <li key={item.product}>
-                          <div className="placeorder row">
+                          <div className="row wmax">
                             <div>
                               <img
                                 src={item.image}

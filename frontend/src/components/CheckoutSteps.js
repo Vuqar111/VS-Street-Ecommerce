@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function CheckoutSteps(props) {
   return (
-    <div className="row rowcheckout checkout-steps">
+    <div className="row wmax checkout-steps">
       <div className={props.step1 ? 'active' : ''}>Daxil Ol</div>
       <div className={props.step2 ? 'active' : ''}>Çatdırılma</div>
       <div className={props.step3 ? 'active' : ''}>Sifariş</div>

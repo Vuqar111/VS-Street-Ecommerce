@@ -53,7 +53,7 @@ export default function PlaceOrderScreen(props) {
     <Wrapper>
 <div className="w-[80%] m-[auto] mt-[50px]">
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
-      <div className="placeorder">
+      <div className="row start">
         <div className="col-2">
           <ul className="w-[100%]  flex justify-between ulplace">
             <li>
@@ -141,14 +141,14 @@ export default function PlaceOrderScreen(props) {
         </div>
       </div>
       <hr className="mt-[20px]" />
-      <div className="orderproducts w-[60%]">
+      <div className="orderproducts wmin">
         <li>
           <div className="card card-body">
             <h2 className="text-[20px] font-bold">Sifariş olunan məhsullar</h2>
             <ul className="mt-[15px]">
               {cart.cartItems.map((item) => (
                 <li key={item.product}>
-                  <div className="placeorder">
+                  <div className="row">
                     <div>
                       <img
                         src={item.image}

@@ -39,7 +39,7 @@ body {
 }
 
 .row.start {
-  justify-content: flex-start;
+  align-items: flex-start;
 }
 .wmax {
   width: 100%;
@@ -144,9 +144,6 @@ select {
   font-weight: bolder;
 }
 
-
-
-
 .cardimgdiv img {
   width: 200px;
   height: auto;
@@ -222,10 +219,6 @@ a.brandfooter {
   font-size: 1.2rem;
 }
 
-.placeorder {
-  width: 100%;
-}
-
 /* Mobile structure for responsive */
 .mobilesearch {
   display: none;
@@ -272,11 +265,7 @@ a.brandfooter {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .shippingdiv {
-  width: 100%;
-  display: flex;
   float: left;
-  justify-content: space-between;
-  flex-direction: column;
 }
 
 .shippingdiv label {
@@ -316,10 +305,6 @@ textarea {
   margin: auto;
 }
 
-.homeproducts {
-  width: 100%;
-}
-
 .reactselect {
   width: 100%;
   background-color: red;
@@ -335,22 +320,14 @@ textarea {
 }
 
 .rownavbar {
-  width: 100%;
   color: black;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-}
-
-.rowcheckout {
-  width: 100%;
 }
 
 .rowcart {
   margin-top: 40px;
 }
 
-.rowcarting {
-  width: 100%;
-}
 .col-2 {
   width: 50%;
   display: flex;
@@ -1031,9 +1008,6 @@ hr {
 }
 
 @media (max-width: 756px) {
-  .rownavbar {
-    width: 100%;
-  }
   .rowcart {
     width: 100%;
     flex-direction: column;

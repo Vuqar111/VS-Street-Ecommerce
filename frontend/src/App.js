@@ -61,7 +61,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="w-[100%]">
-        <header className="row rownavbar">
+        <header className="row rownavbar wmax">
           <div className="row wnormal">
             <div>
               <Link className="brand" to="/">

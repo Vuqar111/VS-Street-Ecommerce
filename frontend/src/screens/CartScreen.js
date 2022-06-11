@@ -90,7 +90,7 @@ export default function CartScreen(props) {
           <ul>
             {cartItems.map((item) => (
               <li key={item.product}>
-                <div className="row rowcarting">
+                <div className="row wmax">
                   <div>
                     <img
                       src={item.image}
@@ -193,7 +193,7 @@ export default function CartScreen(props) {
             <h1 className="mt-[15px]">Çatdırılma Adresi</h1>
           </div>
 
-          <div className="shippingdiv">
+          <div className="row wmax shippingdiv">
             <label htmlFor="fullName">Tam Ad</label>
             <input
               type="text"
@@ -205,7 +205,7 @@ export default function CartScreen(props) {
             ></input>
           </div>
 
-          <div className="shippingdiv">
+          <div className="row wmax shippingdiv">
             <label htmlFor="phonenumber">Telefon nömrəsi</label>
             <input
               type="tel"
@@ -217,7 +217,7 @@ export default function CartScreen(props) {
             ></input>
           </div>
 
-          <div className="shippingdiv">
+          <div className="row wmax shippingdiv">
             <label htmlFor="city">Şəhər</label>
             <input
               type="text"
@@ -229,7 +229,7 @@ export default function CartScreen(props) {
             ></input>
           </div>
 
-          <div className="shippingdiv">
+          <div className="row wmax shippingdiv">
             <label htmlFor="region">Rayon</label>
             <input
               type="text"
@@ -241,7 +241,7 @@ export default function CartScreen(props) {
             ></input>
           </div>
 
-          <div className="shippingdiv">
+          <div className="row wmax shippingdiv">
             <label htmlFor="postalCode">Postal Kod</label>
             <input
               type="text"
@@ -255,7 +255,7 @@ export default function CartScreen(props) {
 
      
 
-          <div className="shippingdiv">
+          <div className="row wmax shippingdiv">
             <label htmlFor="address" className="ml-[20px]">
               Tam Address
             </label>
@@ -269,7 +269,7 @@ export default function CartScreen(props) {
             ></textarea>
           </div>
 
-          <div className="shippingdiv">
+          <div className="row wmax shippingdiv">
             <label />
             <button
               className="w-[100%] bg-[#08AD76] text-[white] p-[1rem] mb-[10px]"
