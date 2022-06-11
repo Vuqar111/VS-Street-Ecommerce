@@ -165,7 +165,7 @@ export default function CartScreen(props) {
               <button
                 type="button"
                 onClick={() => setOpenMenu(true)}
-                className=" w-[100%] bg-[#08AD76] text-[white] p-[1rem]"
+                className="wmax bg-[#08AD76] text-[white] p-[1rem]"
                 disabled={cartItems.length === 0}
               >
                 Sifarişi tamamla
@@ -174,7 +174,7 @@ export default function CartScreen(props) {
               <Link to="/">
                 <button
                   type="button"
-                  className="w-[100%] bg-[white] border-solid border-2 border-[black] p-[1rem]"
+                  className="wmax bg-[white] border-solid border-2 border-[black] p-[1rem]"
                   disabled={cartItems.length === 0}
                 >
                   Alış-verişə davam et

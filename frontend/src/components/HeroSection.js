@@ -44,6 +44,9 @@ const Wrapper = styled.div`
   }
 
   .boximg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     max-width: 650px;  
     width: 70%;
     height: 450px;
@@ -54,7 +57,7 @@ const Wrapper = styled.div`
 
   .clipspan {
     padding: 10px;
-    color: white;
+    color: white; 
     background: var(--green-color);
     clip-path: polygon(100% 28%, 100% 72%, 0 89%, 0 11%);
     border-radius: 10px;
@@ -81,6 +84,9 @@ const Wrapper = styled.div`
     }
 
     .boximg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 90%;
       height: 400px;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);

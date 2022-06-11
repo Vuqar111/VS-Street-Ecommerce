@@ -29,7 +29,6 @@ import CouponEditScreen from "./screens/CouponEditScreen";
 import SeasonListScreen from "./screens/SeasonListScreen";
 import SeasonEditScreen from "./screens/SeasonEditScreen";
 import DashboardScreen from "./screens/DashboardScreen";
-import SupportScreen from "./screens/SupportScreen";
 import Footer from "./components/Footer";
 import ContactForm from "./components/Contact";
 import About from "./components/About";
@@ -362,8 +361,6 @@ function App() {
             path="/dashboard"
             component={DashboardScreen}
           ></AdminRoute>
-          <AdminRoute path="/support" component={SupportScreen}></AdminRoute>
-
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="">

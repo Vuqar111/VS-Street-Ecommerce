@@ -66,7 +66,7 @@ export default function ProductScreen(props) {
           <div>
             <Link to="/">Ana Səhifəyə qayıt</Link>
             <div className="main">
-              <div className="productimg">
+              <div className="row productimg ">
                 <img src={product.image} alt={product.name}></img>
               </div>
               <div className="content ">
@@ -106,7 +106,7 @@ export default function ProductScreen(props) {
                 {product.countInStock > 0 && (
                   <>
                     <li className="w-[200px]">
-                      <div className="flex  justify-between w-[100%] items-center">
+                      <div className="row wmax">
                         <div>Rəng:</div>
                         <div className="sizeselect">
                           <select
@@ -144,7 +144,7 @@ export default function ProductScreen(props) {
                     </li>
 
                     <li className="w-[200px]">
-                      <div className="flex  justify-between w-[100%] items-center">
+                      <div className="row wmax">
                         <div>Ədəd:</div>
                         <div className="sizeselect">
                           <select
@@ -284,9 +284,6 @@ const Wrapper = styled.div`
   }
 
   .productimg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 50%;
     height: 550px;
     background-color: #f6f6f4;
@@ -327,9 +324,6 @@ const Wrapper = styled.div`
       font-size: 15px;
     }
     .productimg {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 100%;
       height: 300px;
       background-color: #f6f6f4;

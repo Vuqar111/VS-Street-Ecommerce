@@ -15,7 +15,7 @@ export default function DashboardScreen() {
   return (
     <div>
       <div>
-        <h1 className='text-center font-bold text-[20px] mt-[15px]'>Statistika</h1>
+        <h2 className='text-center font-bold text-[20px] mt-[15px]'>Statistika</h2>
       </div>
       {loading ? (
         <LoadingBox />
