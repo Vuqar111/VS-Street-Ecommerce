@@ -27,7 +27,7 @@ export default function SigninScreen(props) {
     }
   }, [props.history, redirect, userInfo]);
   return (
-    <div className="signinscreen">
+    <div className="row signinscreen">
       <div className="loginimg">
         <img src={loginimg} alt="loginimg" />
       </div>

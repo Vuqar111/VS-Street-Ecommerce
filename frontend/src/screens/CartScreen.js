@@ -78,7 +78,7 @@ export default function CartScreen(props) {
 
   const [openmenu, setOpenMenu] = useState(false);
   return (
-    <div className="rowcart">
+    <div className="row rowcart">
       <div className="col-2">
         <h1 className="font-bold">Səbətiniz</h1>
         {error && <MessageBox variant="danger">{error}</MessageBox>}
@@ -90,7 +90,7 @@ export default function CartScreen(props) {
           <ul>
             {cartItems.map((item) => (
               <li key={item.product}>
-                <div className="rowcarting">
+                <div className="row rowcarting">
                   <div>
                     <img
                       src={item.image}

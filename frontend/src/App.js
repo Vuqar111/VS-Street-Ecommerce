@@ -60,8 +60,8 @@ function App() {
   const [searchmenu, setSearchmenu] = useState(false);
   return (
     <BrowserRouter>
-      <div className="w-[100%] ">
-        <header className="rownavbar">
+      <div className="w-[100%]">
+        <header className="row rownavbar">
           <div className="row">
             <div>
               <Link className="brand" to="/">
@@ -75,7 +75,7 @@ function App() {
                 )}
               ></Route>
             </div>
-            <div className="desktopmenu">
+            <div className="desktopmenu row">
               <Link to="/cart">
                 <div className="flex justify-center items-center flex-col	">
                   <div className="text-[25px]">
