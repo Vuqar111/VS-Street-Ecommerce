@@ -89,7 +89,7 @@ export default function OrderScreen(props) {
           <h1 className="text-center text-[20px]">
             Sifariş: <br /> {order._id}
           </h1>
-          <div className="w-[80%] m-[auto] p-[30px] flex justify-between items-center orderenterscreen">
+          <div className="row wmin p-[30px] orderenterscreen">
             <div className="w-[100%]">
               <ul>
                 <li>

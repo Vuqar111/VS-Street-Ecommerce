@@ -126,7 +126,7 @@ export default function ProductScreen(props) {
                     </li>
 
                     <li className="w-[200px]">
-                      <div className="flex  justify-between w-[100%] items-center">
+                      <div className="row wmax">
                         <div>Ölçü:</div>
                         <div className="sizeselect">
                           <select

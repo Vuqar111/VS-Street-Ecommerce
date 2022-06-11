@@ -14,7 +14,7 @@ const Features = () => {
       <Wrapper>
       <h2 className='feauturetitle mt-[30px] text-[35px] text-center font-bold'><span className='clipspan'>Keyfiyyətimiz</span>Fərqimizdir</h2>
      
-      <div className='flex justify-between  flex-wrap mt-[20px] fboxmain'>
+      <div className='row mt-[20px] fboxmain'>
           <div className='fbox fade-right'>
            <div className='bg-[#3CBE93] p-[10px] rounded-[10px] text-[white]'>
             <BsSpeedometer/>

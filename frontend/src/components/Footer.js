@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <ul className="w-[100%]  flex justify-center mt-[0px] m-[10px] ">
+          <ul className="wmax row mt-[0px] m-[10px] ">
             <li className="text-[30px] text-[#08AD76] p-[10px]">
               <a href="https://www.instagram.com/vs.street_/?hl=tr">
                 {" "}

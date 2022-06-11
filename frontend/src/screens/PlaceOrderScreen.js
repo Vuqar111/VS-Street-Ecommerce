@@ -55,7 +55,7 @@ export default function PlaceOrderScreen(props) {
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       <div className="row start">
         <div className="col-2">
-          <ul className="w-[100%]  flex justify-between ulplace">
+          <ul className="row wmax ulplace">
             <li>
               <div className="card card-body">
                 <h2 className="text-[30px]">

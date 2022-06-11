@@ -51,8 +51,8 @@ export default function CouponListScreen(props) {
 
   console.log(coupons);
   return (
-    <div className="row">
-      <div className="w-[100%] flex justify-between items-center">
+    <div className="row wnormal">
+      <div className="row wmax">
       <h1 className="font-bold text-[30px]">Kuponlar</h1>
         <button type="button" className="bg-[#08AD76] text-[white] p-[1rem]" onClick={createHandler}>
          Kupon Yarat

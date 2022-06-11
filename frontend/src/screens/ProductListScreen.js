@@ -68,8 +68,8 @@ export default function ProductListScreen(props) {
     dispatch(createProduct());
   };
   return (
-    <div className="row">
-      <div className="w-[100%] flex justify-between items-center">
+    <div className="row wnormal">
+      <div className="row wmax">
         <h1 className="font-bold text-[30px]">Məhsullar</h1>
         <button type="button" className="bg-[#08AD76] text-[white] p-[1rem]" onClick={createHandler}>
          Məhsul Yarat
