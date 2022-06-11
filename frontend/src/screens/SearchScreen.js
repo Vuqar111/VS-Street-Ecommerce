@@ -61,7 +61,7 @@ export default function SearchScreen(props) {
           render={({ history }) => <SubSearch history={history}></SubSearch>}
         ></Route>
       </div>
-      <div className="searchscreenrow row">
+      <div className="row searchscreenrow wnormal">
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
@@ -89,7 +89,7 @@ export default function SearchScreen(props) {
       >
         Məhsulları filtir et
       </div>
-      <div className="row top mt-[30px] ">
+      <div className="row wnormal start mt-[30px] ">
         <div
           className={`${
             filterSection
@@ -174,7 +174,7 @@ export default function SearchScreen(props) {
               {products.length === 0 && (
                 <MessageBox>Axtarışınıza uyğun nəticə tapılmadı</MessageBox>
               )}
-              <div className="homeproducts">
+              <div className="row">
                 {products.map((product) => (
                   <Product key={product._id} product={product}></Product>
                 ))}
