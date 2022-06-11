@@ -8,10 +8,10 @@ const HeroSection = () => {
     <Wrapper>
       <div className="main">
         <div className="content">
-          <h1 className="herotitle">
+          <h2 className="herotitle">
             <span className="clipspan">VS-Street</span>-da <br /> öz
             tərzini kəşf et !
-          </h1>       
+          </h2>       
           <p>
           Öz geyim stilinizə uyğun bir çox geyim nümunəsiylə tanış olun. Tərzinizi "VS-Street"-də bizimlə birgə kəşf edin. Yüzlərlə fərqli növ geyim sizi gözləyir.
           </p>
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
     padding: 20px;
   }
 
-  .content h1 {
+  .content h2 {
     font-size: 35px;
   }
 
@@ -99,7 +99,7 @@ clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);
       margin-left: 0px;
     }
 
-    .content h1 {
+    .content h2 {
       font-size: 30px;
     }
   }

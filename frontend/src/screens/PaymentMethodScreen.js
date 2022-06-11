@@ -22,7 +22,7 @@ export default function PaymentMethodScreen(props) {
       <CheckoutSteps step1 step2 step3></CheckoutSteps>
       <form className="formpayment" onSubmit={submitHandler}>
         <div>
-          <h1 className="paymenttitle">Ödəniş metodunu təsdiqləyin</h1>
+          <h2 className="paymenttitle">Ödəniş metodunu təsdiqləyin</h2>
         </div>
         <div className="paymentdiv row wmax">
           <div>

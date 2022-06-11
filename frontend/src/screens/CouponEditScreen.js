@@ -55,7 +55,7 @@ export default function CouponEditScreen(props) {
     <div>
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1>Create / Edit Coupon {couponId}</h1>
+          <h2>Create / Edit Coupon {couponId}</h2>
         </div>
         {loadingUpdate && <LoadingBox></LoadingBox>}
         {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}

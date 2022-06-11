@@ -773,6 +773,12 @@ hr {
   display: none;
 }
 
+
+.mobilecomponent {
+  display: none;
+}
+
+
 @media (max-width: 756px) {
   ::-webkit-scrollbar {
     display: none;

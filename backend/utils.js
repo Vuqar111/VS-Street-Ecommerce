@@ -66,7 +66,7 @@ export const isSellerOrAdmin = (req, res, next) => {
 //   });
 
 export const payOrderEmailTemplate = (order) => {
-  return `<h1>Thanks for shopping with us</h1>
+  return `<h2>Thanks for shopping with us</h2>
   <p>
   Hi ${order.user.name},</p>
   <p>We have finished processing your order.</p>

@@ -30,7 +30,7 @@ export default function OrderListScreen(props) {
   };
   return (
     <div className='row'>
-      <h1  className="font-bold text-[30px]">Sifarişlər</h1>
+      <h2  className="font-bold text-[30px]">Sifarişlər</h2>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
       {loading ? (

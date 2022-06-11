@@ -86,9 +86,9 @@ export default function OrderScreen(props) {
           ref={(el) => (componentRef = el)}
           className="w-[100%] m-[auto]  mt-[30px]  p-[20px]  orderprintscreen"
         >
-          <h1 className="text-center text-[20px]">
+          <h2 className="text-center text-[20px]">
             Sifariş: <br /> {order._id}
-          </h1>
+          </h2>
           <div className="row wmin p-[30px] orderenterscreen">
             <div className="w-[100%]">
               <ul>
@@ -215,7 +215,7 @@ export default function OrderScreen(props) {
           </div>
         </div>
         <div className="orderinfodetail">
-          <h1>SİFARİŞ HAQQINDA MƏLUMAT</h1>
+          <h2>SİFARİŞ HAQQINDA MƏLUMAT</h2>
           <p>
             Hörmətli müştəri, Sifarişiniz bitdiyi təqdirdə ödənişi etdikdən
             sonra zəhmət olmasa çekin şəklini chat (online chat, whatsapp və ya
@@ -260,7 +260,7 @@ const Wrapper = styled.div`
     padding: 20px;
     margin-top: 20px;
   }
-  .orderinfodetail h1 {
+  .orderinfodetail h2 {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
@@ -304,7 +304,7 @@ const Wrapper = styled.div`
       margin-top: 20px;
       margin: auto;
     }
-    .orderinfodetail h1 {
+    .orderinfodetail h2 {
       text-align: center;
       font-size: 20px;
       font-weight: bold;
@@ -336,7 +336,7 @@ const Wrapper = styled.div`
       width: 100%;
       padding: 0px;
     }
-    .orderprintscreen h1 {
+    .orderprintscreen h2 {
       font-size: 15px;
       margin-top: 30px;
     }

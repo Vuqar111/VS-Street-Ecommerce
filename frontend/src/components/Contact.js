@@ -7,9 +7,9 @@ function ContactForm() {
   if (state.succeeded) {
     return (
       <div className="row center column wmin text-center mt-[100px]">
-        <h1 className="text-[35px] md:text-[25px]">
+        <h2 className="text-[35px] md:text-[25px]">
           Mesajınız üçün təşəkkürlər!
-        </h1>
+        </h2>
         <br />
         <p className="text-[15px]">
           Sizinlə tez bir zamanda əlaqə saxlanılacaq.
@@ -24,7 +24,7 @@ function ContactForm() {
   return (
     <Wrapper>
       <div className="contacttitle">
-        <h1>Əlaqə</h1>
+        <h2>Əlaqə</h2>
       </div>
       <form onSubmit={handleSubmit} className="contactform">
         <label htmlFor="name">Ad</label>

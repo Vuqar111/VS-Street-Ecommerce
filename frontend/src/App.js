@@ -253,7 +253,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row mobilecomponent">
             <Link to="/search/name">
               <div className="searchbtn">
                 <AiOutlineSearch />

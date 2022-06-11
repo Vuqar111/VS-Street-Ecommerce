@@ -70,7 +70,7 @@ export default function ProductScreen(props) {
                 <img src={product.image} alt={product.name}></img>
               </div>
               <div className="content ">
-                <h1 className="productname">{product.name}</h1>
+                <h2 className="productname">{product.name}</h2>
                 <h6 className="font-bold text-[#08AD76]">
                   Məhsul Kodu: <span>{product._id}</span>
                 </h6>

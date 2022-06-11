@@ -6,9 +6,9 @@ const FeaturedContent = () => {
   return (
     <Wrapper>
       <div className="featuredtext">
-        <h1>
+        <h2>
           <span>Dizayn sizdən</span> T-shirt bizdən
-        </h1>
+        </h2>
       </div>
       <div className="mainfeaturedsection">
         <div className="imgdiv">
@@ -16,9 +16,9 @@ const FeaturedContent = () => {
         </div>
         <div className="infodiv">
           <div className="secondinfodiv">
-            <h1>
+            <h2>
              T-shirt ideyan var? <br /> Gerçəkləşdirərik!
-            </h1>
+            </h2>
             <p>
               Beləki ağlında olan dizaynın şəklini və detallarını bizim e-mailimizə atmaqla arzularını gerçəkləşdirə bilərsəniz.
             </p>
@@ -48,7 +48,7 @@ const Wrapper = styled.div`
     font-weight: bold;
   }
 
-  .featuredtext h1 {
+  .featuredtext h2 {
     font-size: 35px;
     color: black;
     font-weight: bolder;
@@ -95,7 +95,7 @@ const Wrapper = styled.div`
     float: right;
     text-align: left;
   }
-  .infodiv h1 {
+  .infodiv h2 {
     font-weight: bold;
     text-align: left;
     font-size: 35px;

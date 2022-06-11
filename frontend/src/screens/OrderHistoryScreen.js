@@ -13,7 +13,7 @@ export default function OrderHistoryScreen(props) {
   }, [dispatch]);
   return (
     <div className='row p-[0px]'>
-      <h1 className="font-bold text-[30px]">Sifarişlərim</h1>
+      <h2 className="font-bold text-[30px]">Sifarişlərim</h2>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (

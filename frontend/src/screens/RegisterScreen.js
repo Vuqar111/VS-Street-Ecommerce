@@ -48,9 +48,9 @@ export default function RegisterScreen(props) {
       <div className="loginform">
         <form className="form" onSubmit={submitHandler}>
           <div>
-            <h1 className="mt-[30px] text-center text-[35px] font-bold">
+            <h2 className="mt-[30px] text-center text-[35px] font-bold">
             Qeydiyyat
-            </h1>
+            </h2>
           </div>
           {loading && <LoadingBox></LoadingBox>}
           {error && <MessageBox variant="danger">{error}</MessageBox>}

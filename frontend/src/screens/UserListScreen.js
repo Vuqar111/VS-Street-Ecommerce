@@ -30,7 +30,7 @@ export default function UserListScreen(props) {
   };
   return (
     <div className="row">
-      <h1 className="font-bold text-[30px]">İstifadəçilər</h1>
+      <h2 className="font-bold text-[30px]">İstifadəçilər</h2>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
       {successDelete && (

@@ -51,7 +51,7 @@ export default function ProfileScreen() {
     <div className="row mt-[30px]">
       <form className="form" onSubmit={submitHandler}>
         <div>
-          <h1 className="text-center font-bold text-[35px]">İstifadəçi məlumatları</h1>
+          <h2 className="text-center font-bold text-[35px]">İstifadəçi məlumatları</h2>
         </div>
         {loading ? (
           <LoadingBox></LoadingBox>

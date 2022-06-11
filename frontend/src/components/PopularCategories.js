@@ -16,9 +16,9 @@ const PopularCategories = () => {
   return (
     <>
       <div className="featuredtext">
-        <h1 className="populartitle">
+        <h2 className="populartitle">
           <span className="clipspan">Məşhur </span> Kateqoriyalar
-        </h1>
+        </h2>
       </div>
       <div>
         {loading ? (

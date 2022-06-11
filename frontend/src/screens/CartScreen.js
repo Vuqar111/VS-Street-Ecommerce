@@ -80,7 +80,7 @@ export default function CartScreen(props) {
   return (
     <div className="row rowcart">
       <div className="col-2">
-        <h1 className="font-bold">Səbətiniz</h1>
+        <h2 className="font-bold">Səbətiniz</h2>
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         {cartItems.length === 0 ? (
           <MessageBox>
@@ -190,7 +190,7 @@ export default function CartScreen(props) {
 
         <form className="formshipping" onSubmit={submitHandler}>
           <div className="text-center font-bold text-[20px]">
-            <h1 className="mt-[15px]">Çatdırılma Adresi</h1>
+            <h2 className="mt-[15px]">Çatdırılma Adresi</h2>
           </div>
 
           <div className="row wmax shippingdiv">

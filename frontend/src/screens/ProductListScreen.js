@@ -70,7 +70,7 @@ export default function ProductListScreen(props) {
   return (
     <div className="row wnormal">
       <div className="row wmax">
-        <h1 className="font-bold text-[30px]">Məhsullar</h1>
+        <h2 className="font-bold text-[30px]">Məhsullar</h2>
         <button type="button" className="bg-[#08AD76] text-[white] p-[1rem]" onClick={createHandler}>
          Məhsul Yarat
         </button>
