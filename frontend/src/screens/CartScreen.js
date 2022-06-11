@@ -137,7 +137,7 @@ export default function CartScreen(props) {
         )}
       </div>
       <div className="ordersection">
-        <div className="w-[100%] p-[10px]">
+        <div className="wmax p-[10px]">
           <ul>
             <li className="font-bold text-[25px]">Sifarişin özəti</li>
             <li className="flex  justify-between">

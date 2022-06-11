@@ -6,7 +6,7 @@ function ContactForm() {
   const [state, handleSubmit] = useForm("mqkngkqn");
   if (state.succeeded) {
     return (
-      <div className="w-[60%] m-[auto] text-center flex justify-center flex-col mt-[100px]">
+      <div className="row center column wmin text-center mt-[100px]">
         <h1 className="text-[35px] md:text-[25px]">
           Mesajınız üçün təşəkkürlər!
         </h1>

@@ -28,7 +28,6 @@ import CouponListScreen from "./screens/CouponListScreen";
 import CouponEditScreen from "./screens/CouponEditScreen";
 import SeasonListScreen from "./screens/SeasonListScreen";
 import SeasonEditScreen from "./screens/SeasonEditScreen";
-import MapScreen from "./screens/MapScreen";
 import DashboardScreen from "./screens/DashboardScreen";
 import SupportScreen from "./screens/SupportScreen";
 import Footer from "./components/Footer";
@@ -77,7 +76,7 @@ function App() {
             </div>
             <div className="desktopmenu row">
               <Link to="/cart">
-                <div className="flex justify-center items-center flex-col	">
+                <div className="row column">
                   <div className="text-[25px]">
                     <AiOutlineShoppingCart />
                     {cartItems.length > 0 && (
@@ -92,7 +91,7 @@ function App() {
                 {userInfo ? (
                   <div className="dropdown">
                     <Link to="#">
-                      <div className="flex justify-center items-center flex-col	">
+                      <div className="row column">
                         <div className="text-[25px]">
                           <BsFillPersonFill />
                         </div>
@@ -118,7 +117,7 @@ function App() {
                   </div>
                 ) : (
                   <Link to="/signin">
-                    <div className="flex justify-center items-center flex-col	">
+                    <div className="row column">
                       <div className="text-[25px]">
                         <BsFillPersonFill />
                       </div>
@@ -131,7 +130,7 @@ function App() {
                 {userInfo && userInfo.isAdmin && (
                   <div className="dropdown">
                     <Link to="#admin">
-                      <div className="flex justify-center items-center flex-col	">
+                      <div className="row column">
                         <div className="text-[25px]">
                           <RiAdminLine />
                         </div>
@@ -317,7 +316,6 @@ function App() {
             path="/profile"
             component={ProfileScreen}
           ></PrivateRoute>
-          <PrivateRoute path="/map" component={MapScreen}></PrivateRoute>
           <AdminRoute
             path="/productlist"
             component={ProductListScreen}

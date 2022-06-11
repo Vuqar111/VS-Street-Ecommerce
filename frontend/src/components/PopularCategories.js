@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { listSeasons } from "../actions/seasonActions";
 import LoadingBox from "../components/LoadingBox";
@@ -15,13 +14,13 @@ const PopularCategories = () => {
   }, [dispatch]);
 
   return (
-    <Wrapper>
+    <>
       <div className="featuredtext">
         <h1 className="populartitle">
           <span className="clipspan">Məşhur </span> Kateqoriyalar
         </h1>
       </div>
-      <div className="mainpopularsec">
+      <div>
         {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (
@@ -31,7 +30,7 @@ const PopularCategories = () => {
             {seasons.length === 0 && (
               <MessageBox>İstəyinizə uyğun kateqoriya tapılmadı</MessageBox>
             )}
-            <div className="homeproductsmain row">
+            <div className="row wnormal">
               {seasons.slice(0, 3).map((season) => {
                 return (
                   <Link to="/search/name">
@@ -50,90 +49,9 @@ const PopularCategories = () => {
           </>
         )}
       </div>
-    </Wrapper>
+      </>
   );
 };
 
-const Wrapper = styled.div`
-  width: 80%;
-  margin: auto;
-  .box {
-    position: relative;
-    min-width: 300px;
-    height: 100%;
-    width: 100%;
-    margin-top: 10px;
-  }
-  .boximg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--white-color);
-    max-width: 300px;
-    width: 100%;
-    height: 350px;
-    transition: all 0.5s ease-in-out;
-  }
-  .boximg img {
-    width: 100%;
-    height: 100%;
-    max-height: 350px;
-    object-fit: cover;
-  }
 
-  .boximg:hover {
-    transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
-  }
-  .footer {
-    margin-top: 5px;
-    h3 {
-      font-size: 15px;
-      font-weight: bold;
-    }
-  }
-
-  .subimglink {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    padding: 10px;
-    transform: translateX(-50%);
-    color: white;
-    background: #08ad76;
-  }
-
-  @media (max-width: 768px) {
-    width: 80%;
-
-    .box {
-      min-width: 280px;
-      height: 100%;
-      width: 100%;
-      margin-top: 10px;
-    }
-    .boximg {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--white-color);
-      max-width: 300px;
-      width: 100%;
-      height: 350px;
-    }
-    .boximg img {
-      width: 100%;
-      height: 100%;
-      max-height: 350px;
-      object-fit: cover;
-    }
-    .footer {
-      margin-top: 5px;
-      h3 {
-        font-size: 15px;
-        font-weight: bold;
-      }
-    }
-  }
-`;
-export default PopularCategories;
+export default PopularCategories

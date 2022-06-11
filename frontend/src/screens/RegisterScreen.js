@@ -41,7 +41,7 @@ export default function RegisterScreen(props) {
     }
   }, [props.history, redirect, userInfo]);
   return (
-    <div className="row">
+    <div className="row wnormal">
       <div className="loginimg">
         <img src={registerimg} alt="register" />
       </div>

@@ -50,7 +50,7 @@ export default function HomeScreen() {
       ) : (
         <>
           {products.length === 0 && <MessageBox>İstəyinizə uyğun məhsul tapılmadı</MessageBox>}
-          <div className="homeproductsmain row">
+          <div className="wnormal row">
             {products.slice(0,3).map((product) => (
               <HomeProduct key={product._id} product={product}></HomeProduct>
             ))}
