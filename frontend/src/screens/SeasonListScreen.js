@@ -53,7 +53,7 @@ export default function SeasonListScreen(props) {
   return (
     <div className="row wnormal">
       <div className="row wmax">
-      <h2 className="font-bold text-[30px]">Modeller</h2>
+      <h2>Modeller</h2>
         <button type="button" className="bg-[#08AD76] text-[white] p-[1rem]" onClick={createHandler}>
          Model Yarat
         </button>

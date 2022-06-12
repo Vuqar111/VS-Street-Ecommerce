@@ -12,8 +12,8 @@ export default function OrderHistoryScreen(props) {
     dispatch(listOrderMine());
   }, [dispatch]);
   return (
-    <div className='row p-[0px]'>
-      <h2 className="font-bold text-[30px]">Sifarişlərim</h2>
+    <div className='row p-[0px] wnormal'>
+      <h2>Sifarişlərim</h2>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (

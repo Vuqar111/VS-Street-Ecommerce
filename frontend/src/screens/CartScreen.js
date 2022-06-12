@@ -78,9 +78,9 @@ export default function CartScreen(props) {
 
   const [openmenu, setOpenMenu] = useState(false);
   return (
-    <div className="row rowcart">
+    <div className="row rowcart start wnormal">
       <div className="col-2">
-        <h2 className="font-bold">Səbətiniz</h2>
+        <h2>Səbətiniz</h2>
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         {cartItems.length === 0 ? (
           <MessageBox>
