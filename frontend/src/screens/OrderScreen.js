@@ -86,7 +86,7 @@ export default function OrderScreen(props) {
           ref={(el) => (componentRef = el)}
           className="w-[100%] m-[auto]  mt-[30px]  p-[20px]  orderprintscreen"
         >
-          <h2 className="text-center text-[20px]">
+          <h2 className="text-center">
             Sifariş: <br /> {order._id}
           </h2>
           <div className="row wmin p-[30px] orderenterscreen">

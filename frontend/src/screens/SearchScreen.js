@@ -67,7 +67,9 @@ export default function SearchScreen(props) {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div className="result">{products.length} Nəticə</div>
+          <div>
+            <h2>{products.length} Nəticə</h2>
+          </div>
         )}
         <div>
           <select
@@ -127,9 +129,7 @@ export default function SearchScreen(props) {
             )}
           </div>
           <div>
-            <h3 className=" mt-[20px] filtertitle">
-              Qiymət
-            </h3>
+            <h3 className=" mt-[20px] filtertitle">Qiymət</h3>
             <ul>
               {prices.map((p) => (
                 <li key={p.name}>
@@ -146,9 +146,7 @@ export default function SearchScreen(props) {
             </ul>
           </div>
           <div>
-            <h3 className="mt-[20px] filtertitle">
-              Müştəri rəyləri
-            </h3>
+            <h3 className="mt-[20px] filtertitle">Müştəri rəyləri</h3>
             <ul>
               {ratings.map((r) => (
                 <li key={r.name}>

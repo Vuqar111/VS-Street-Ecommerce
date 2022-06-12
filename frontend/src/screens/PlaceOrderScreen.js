@@ -58,7 +58,7 @@ export default function PlaceOrderScreen(props) {
           <ul className="row wmax ulplace">
             <li>
               <div className="card card-body">
-                <h2 className="text-[30px]">
+                <h2 >
                   <strong>Çatdırılma Adresi</strong>
                 </h2>
                 <p>
@@ -72,7 +72,7 @@ export default function PlaceOrderScreen(props) {
             </li>
             <li>
               <div className="card card-body">
-                <h2 className="text-[30px]">
+                <h2>
                   <strong>Ödəniş</strong>
                 </h2>
                 <img

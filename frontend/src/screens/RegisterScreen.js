@@ -48,7 +48,7 @@ export default function RegisterScreen(props) {
       <div className="loginform">
         <form className="form" onSubmit={submitHandler}>
           <div>
-            <h2 className="mt-[30px] text-center text-[35px] ">
+            <h2 className="mt-[30px] text-center">
             Qeydiyyat
             </h2>
           </div>

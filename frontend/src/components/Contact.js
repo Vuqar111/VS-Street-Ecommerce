@@ -7,7 +7,7 @@ function ContactForm() {
   if (state.succeeded) {
     return (
       <div className="row center column wmin text-center mt-[100px]">
-        <h2 className="text-[35px] md:text-[25px]">
+        <h2 className="md:text-[25px]">
           Mesajınız üçün təşəkkürlər!
         </h2>
         <br />

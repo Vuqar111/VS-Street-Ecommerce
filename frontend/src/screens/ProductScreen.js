@@ -180,7 +180,7 @@ export default function ProductScreen(props) {
               </div>
             </div>
             <div className="w-[90%] m-[auto] mt-[50px] ">
-              <h2 id="reviews" className="text-[20px] m-[0px] ">
+              <h2 id="reviews" className="m-[0px] ">
                 Rəylər
               </h2>
               {product.reviews.length === 0 && (
@@ -199,7 +199,7 @@ export default function ProductScreen(props) {
                   {userInfo ? (
                     <form className="formreview" onSubmit={submitHandler}>
                       <div>
-                        <h2 className="text-[20px] m-[0px] ">
+                        <h2 className="m-[0px] ">
                           Rəy yazın
                         </h2>
                       </div>
