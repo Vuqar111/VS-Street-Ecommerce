@@ -58,7 +58,7 @@ export default function DashboardScreen() {
           </ul>
           <div>
             <div>
-              <h2 className='text-center font-bold text-[20px] mt-[15px]'>Satışlar</h2>
+              <h2 className='text-center mt-[15px]'>Satışlar</h2>
               {summary.dailyOrders.length === 0 ? (
                 <MessageBox>Satış yoxdur, Biznesinizi bağlayın
                 </MessageBox>
@@ -77,7 +77,7 @@ export default function DashboardScreen() {
             </div>
           </div>
           <div>
-            <h2 className='text-center font-bold text-[20px] mt-[15px]'>Kateqoriya</h2>
+            <h2 className='text-center mt-[15px]'>Kateqoriya</h2>
             {summary.productCategories.length === 0 ? (
               <MessageBox>Heç bir kateqoriya yoxdur</MessageBox>
             ) : (

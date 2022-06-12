@@ -66,7 +66,7 @@ export default function ShippingAddressScreen(props) {
     <div className='shippingadress'>
       <CheckoutSteps step1 step2></CheckoutSteps>
       <form className="form" onSubmit={submitHandler}>
-        <div className='text-center font-bold text-[25px]'>
+        <div className='text-center text-[25px]'>
           <h2 className='mt-[15px]'>Shipping Address</h2>
         </div>
         <div>

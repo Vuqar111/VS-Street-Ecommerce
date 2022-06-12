@@ -97,7 +97,7 @@ export default function SearchScreen(props) {
               : "col1 filtersection"
           }`}
         >
-          <h3 className="font-bold text-[20px] filtertitle">Kateqoriyalar</h3>
+          <h3 className="filtertitle">Kateqoriyalar</h3>
           <div>
             {loadingCategories ? (
               <LoadingBox></LoadingBox>
@@ -127,7 +127,7 @@ export default function SearchScreen(props) {
             )}
           </div>
           <div>
-            <h3 className="font-bold text-[20px] mt-[20px] filtertitle">
+            <h3 className=" mt-[20px] filtertitle">
               Qiymət
             </h3>
             <ul>
@@ -146,7 +146,7 @@ export default function SearchScreen(props) {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-[20px] mt-[20px] filtertitle">
+            <h3 className="mt-[20px] filtertitle">
               Müştəri rəyləri
             </h3>
             <ul>

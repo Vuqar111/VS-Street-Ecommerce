@@ -13,7 +13,7 @@ export default function Product(props) {
         </Link>
         <div className="footer">
           <h3>{product.name}</h3>
-          <p className="font-bold">{product.price} Azn</p>
+          <p>{product.price} Azn</p>
           <Rating
             rating={product.rating}
             numReviews={product.numReviews}

@@ -71,10 +71,10 @@ export default function ProductScreen(props) {
               </div>
               <div className="content ">
                 <h2 className="productname">{product.name}</h2>
-                <h6 className="font-bold text-[#08AD76]">
+                <h6 className="text-[#08AD76]">
                   Məhsul Kodu: <span>{product._id}</span>
                 </h6>
-                <h6 className="font-bold ">
+                <h6>
                   Marka: <span>VS-STREET</span>
                 </h6>
                 <h3 className="mt-[8px] mb-[8px] text-[28px] font-semibold">
@@ -93,7 +93,7 @@ export default function ProductScreen(props) {
 
                 <hr />
                 <div>
-                  <span className="font-bold">Uyğunluq:</span>
+                  <span >Uyğunluq:</span>
                   <span>
                     {product.countInStock > 0 ? (
                       <span>Stokdadır</span>
@@ -180,7 +180,7 @@ export default function ProductScreen(props) {
               </div>
             </div>
             <div className="w-[90%] m-[auto] mt-[50px] ">
-              <h2 id="reviews" className="text-[20px] m-[0px] font-bold">
+              <h2 id="reviews" className="text-[20px] m-[0px] ">
                 Rəylər
               </h2>
               {product.reviews.length === 0 && (
@@ -199,7 +199,7 @@ export default function ProductScreen(props) {
                   {userInfo ? (
                     <form className="formreview" onSubmit={submitHandler}>
                       <div>
-                        <h2 className="text-[20px] m-[0px] font-bold">
+                        <h2 className="text-[20px] m-[0px] ">
                           Rəy yazın
                         </h2>
                       </div>

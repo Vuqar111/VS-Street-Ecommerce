@@ -139,21 +139,21 @@ export default function CartScreen(props) {
       <div className="ordersection">
         <div className="wmax p-[10px]">
           <ul>
-            <li className="font-bold text-[25px]">Sifarişin özəti</li>
+            <li className="text-[25px]">Sifarişin özəti</li>
             <li className="flex  justify-between">
-              <div className="font-bold">Məhsullar</div>
+              <div>Məhsullar</div>
               <div>
                 ({cartItems.reduce((a, c) => a + c.qty, 0)} məhsul) :
                 {cartItems.reduce((a, c) => a + c.price * c.qty, 0)} Azn
               </div>
             </li>
             <li className="flex  justify-between">
-              <div className="font-bold">Endirim</div>
+              <div>Endirim</div>
               <div>0 Azn</div>
             </li>
             <hr />
             <li className="flex  justify-between">
-              <div className="font-bold">Ümumi Qiymət</div>
+              <div>Ümumi Qiymət</div>
               <div>
                 {cartItems.reduce((a, c) => a + c.qty, 0) > 5
                   ? cartItems.reduce((a, c) => a + c.price * c.qty, 0) + 10
@@ -189,7 +189,7 @@ export default function CartScreen(props) {
         <CheckoutSteps step1 step2></CheckoutSteps>
 
         <form className="formshipping" onSubmit={submitHandler}>
-          <div className="text-center font-bold text-[20px]">
+          <div className="text-center  text-[20px]">
             <h2 className="mt-[15px]">Çatdırılma Adresi</h2>
           </div>
 

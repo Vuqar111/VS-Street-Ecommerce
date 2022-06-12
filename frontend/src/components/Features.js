@@ -12,14 +12,14 @@ const Features = () => {
       }, []);
   return (
       <Wrapper>
-      <h2 className='feauturetitle mt-[30px] text-[35px] text-center font-bold'><span className='clipspan'>Keyfiyyətimiz</span>Fərqimizdir</h2>
+      <h2 className='feauturetitle mt-[30px] text-[35px] text-center'><span className='clipspan'>Keyfiyyətimiz</span>Fərqimizdir</h2>
      
       <div className='row mt-[20px] fboxmain'>
           <div className='fbox fade-right'>
            <div className='bg-[#3CBE93] p-[10px] rounded-[10px] text-[white]'>
             <BsSpeedometer/>
            </div>
-           <h3 className='font-bold text-[20px] fade-right'>Sürətli və keyfiyyətli çatdırılma xidməti</h3>
+           <h3>Sürətli və keyfiyyətli çatdırılma xidməti</h3>
            <p>Sifarişlər ölkə daxili həyata keçirilir</p>
           </div>
 
@@ -27,7 +27,7 @@ const Features = () => {
            <div className='bg-[#3CBE93] p-[10px] rounded-[10px] text-[white]'>
             <IoMdCreate/>
            </div>
-           <h3 className='font-bold text-[20px]'>Öz dizaynını yaratma imkanı</h3>
+           <h3 >Öz dizaynını yaratma imkanı</h3>
            <p>İstədiyiniz dizaynda paltarları istehsal edirik</p>
           </div>
 
@@ -35,7 +35,7 @@ const Features = () => {
            <div className='bg-[#3CBE93] p-[10px] rounded-[10px] text-[white]'>
             <BiSupport/>
            </div>
-           <h3 className='font-bold text-[20px]'>7/24 Dəstək</h3>
+           <h3>7/24 Dəstək</h3>
            <p>İstənilən vaxtda suallarınızı cavablandırmaq üçün burdayıq</p>
           </div>
       </div>

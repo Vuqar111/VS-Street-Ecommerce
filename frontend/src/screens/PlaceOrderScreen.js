@@ -89,7 +89,7 @@ export default function PlaceOrderScreen(props) {
           <div className="card card-body">
             <ul>
               <li>
-                <h2 className="text-[25px] font-bold">Sifariş özəti</h2>
+                <h2>Sifariş özəti</h2>
               </li>
               <li className="text-[red]">
                 ****
@@ -144,7 +144,7 @@ export default function PlaceOrderScreen(props) {
       <div className="orderproducts wmin">
         <li>
           <div className="card card-body">
-            <h2 className="text-[20px] font-bold">Sifariş olunan məhsullar</h2>
+            <h2>Sifariş olunan məhsullar</h2>
             <ul className="mt-[15px]">
               {cart.cartItems.map((item) => (
                 <li key={item.product}>

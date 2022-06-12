@@ -48,7 +48,7 @@ export default function RegisterScreen(props) {
       <div className="loginform">
         <form className="form" onSubmit={submitHandler}>
           <div>
-            <h2 className="mt-[30px] text-center text-[35px] font-bold">
+            <h2 className="mt-[30px] text-center text-[35px] ">
             Qeydiyyat
             </h2>
           </div>
@@ -104,11 +104,11 @@ export default function RegisterScreen(props) {
               Qeydiyyat
             </button>
           </div>
-          <p className="text-center font-bold mt-[10px]">VƏ YA</p>
+          <p className="text-center mt-[10px]">VƏ YA</p>
           <div className="mt-[10px] text-center">
             <div className="p-[10px]">
               Hesabın var?{" "}
-              <Link className="font-bold" to={`/signin?redirect=${redirect}`}>
+              <Link  to={`/signin?redirect=${redirect}`}>
                 Daxil ol
               </Link>
             </div>
