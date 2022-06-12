@@ -71,8 +71,12 @@ export default function ProductListScreen(props) {
     <div className="row wnormal">
       <div className="row wmax">
         <h2 className="font-bold text-[30px]">Məhsullar</h2>
-        <button type="button" className="bg-[#08AD76] text-[white] p-[1rem]" onClick={createHandler}>
-         Məhsul Yarat
+        <button
+          type="button"
+          className="bg-[#08AD76] text-[white] p-[1rem]"
+          onClick={createHandler}
+        >
+          Məhsul Yarat
         </button>
       </div>
 
@@ -121,26 +125,13 @@ export default function ProductListScreen(props) {
                       className="bg-[red] text-[white] p-[1rem]"
                       onClick={() => deleteHandler(product)}
                     >
-                    Təmizlə
+                      Təmizlə
                     </button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-          {/* <div className="row center pagination">
-            {[...Array(pages).keys()].map((x) => (
-              <div className="pagdiv">
-                <Link
-                  className={x + 1 === page ? "active" : ""}
-                  key={x + 1}
-                  to={`/productlist/pageNumber/${x + 1}`}
-                >
-                  {x + 1}
-                </Link>
-              </div>
-            ))}
-          </div> */}
         </>
       )}
     </div>

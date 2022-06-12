@@ -42,7 +42,7 @@ export default function DashboardScreen() {
                 {summary.orders[0] ? summary.orders[0].numOrders : 0}
               </div>
             </li>
-            <li>
+            <li>        
               <div className="summary-title color3">
                 <span>
                   <i className="fa fa-money" /> Qazanc
