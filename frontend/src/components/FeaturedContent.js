@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import image1 from "../assets/image1.jpg";
+import image1 from "../common/assets/images/fashionmodel.jpg";
 
 const FeaturedContent = () => {
   return (

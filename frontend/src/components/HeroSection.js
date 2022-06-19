@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import image2 from "../assets/image2.jpg";
+import image2 from "../common/assets/images/homemodel.jpg";
 
 const HeroSection = () => {
   return (
@@ -9,15 +9,20 @@ const HeroSection = () => {
       <div className="main">
         <div className="content">
           <h2 className="herotitle">
-            <span className="clipspan">VS-Street</span>-da <br /> öz
-            tərzini kəşf et !
-          </h2>       
+            <span className="clipspan">VS-Street</span>-da <br /> öz tərzini
+            kəşf et !
+          </h2>
           <p>
-          Öz geyim stilinizə uyğun bir çox geyim nümunəsiylə tanış olun. Tərzinizi "VS-Street"-də bizimlə birgə kəşf edin. Yüzlərlə fərqli növ geyim sizi gözləyir.
+            Öz geyim stilinizə uyğun bir çox geyim nümunəsiylə tanış olun.
+            Tərzinizi "VS-Street"-də bizimlə birgə kəşf edin. Yüzlərlə fərqli
+            növ geyim sizi gözləyir.
           </p>
           <Link to="/search/name">
-            <button type="button" className="bg-[#08AD76] text-[white] p-[1rem] homebtn">
-               Kəşf et
+            <button
+              type="button"
+              className="bg-[#08AD76] text-[white] p-[1rem] homebtn"
+            >
+              Kəşf et
             </button>
           </Link>
         </div>
@@ -47,7 +52,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 650px;  
+    max-width: 650px;
     width: 70%;
     height: 450px;
     clip-path: polygon(0 18%, 100% 9%, 100% 91%, 0 82%);
@@ -57,7 +62,7 @@ const Wrapper = styled.div`
 
   .clipspan {
     padding: 10px;
-    color: white; 
+    color: white;
     background: var(--green-color);
     clip-path: polygon(100% 28%, 100% 72%, 0 89%, 0 11%);
     border-radius: 10px;
@@ -90,7 +95,7 @@ const Wrapper = styled.div`
       width: 90%;
       height: 400px;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);
-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 92%);
       background: transparent;
       border-radius: 15px;
       margin-top: 15px;

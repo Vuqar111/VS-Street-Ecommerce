@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { listSeasons } from "../actions/seasonActions";
+import { listSeasons } from "../common/actions/seasonActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { Link } from "react-router-dom";
@@ -36,7 +36,7 @@ const PopularCategories = () => {
                   <Link to="/search/name">
                     <div key={season._id} className="box">
                       <div className="boximg row">
-                         <img src={season.image} alt={season.title} />
+                        <img src={season.image} alt={season.title} />
                       </div>
                       <Link to="/search/name">
                         <p className="subimglink">Kəşf Et</p>
@@ -49,9 +49,8 @@ const PopularCategories = () => {
           </>
         )}
       </div>
-      </>
+    </>
   );
 };
 
-
-export default PopularCategories
+export default PopularCategories;
